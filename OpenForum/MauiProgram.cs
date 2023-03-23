@@ -1,4 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
+using OpenForum.View;
+using OpenForum.ViewModel;
 
 namespace OpenForum;
 
@@ -23,6 +25,12 @@ public static class MauiProgram
 		builder.Logging.AddDebug();
 #endif
 
-		return builder.Build();
+		builder.Services.AddSingleton<LoginViewModel>();
+		builder.Services.AddSingleton<LoginPage>();
+
+        builder.Services.AddSingleton<ForumViewModel>();
+        builder.Services.AddSingleton<ForumPage>();
+
+        return builder.Build();
 	}
 }

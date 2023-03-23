@@ -1,5 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using OpenForum.View;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,17 +14,21 @@ namespace OpenForum.ViewModel
        
         public LoginViewModel() 
         {
+
         }
 
         [ObservableProperty]
-        int count;
+        string username;
 
+        [ObservableProperty]
+        string password;
 
-        // navigation command
-
-        /*[RelayCommand]
-        void Navigate()
+        [RelayCommand]
+        void OnLogin()
         {
-        }*/
+            Shell.Current.GoToAsync(nameof(ForumPage));
+        }
+        
+
     }
 }

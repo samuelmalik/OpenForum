@@ -9,8 +9,8 @@
         
         
         <VerticalStackLayout BackgroundColor="#0F3460" Grid.ColumnSpan="2" Grid.Column="0" Grid.Row="0" Margin="0" VerticalOptions="Center">
-            <Image Source="C:\Users\samue\source\repos\OpenForum\OpenForum\Resources\Images\of_logo.png"
-                   WidthRequest="65" HeightRequest="65" Aspect="AspectFill"/>
+            <Image Source="of_logo_v1_1.png"
+                   WidthRequest="65" Margin="5"/>
         </VerticalStackLayout>
 
         <HorizontalStackLayout BackgroundColor="#533483" Grid.Column="0" Grid.Row="1" >
