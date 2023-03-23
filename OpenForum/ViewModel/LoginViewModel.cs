@@ -14,7 +14,7 @@ namespace OpenForum.ViewModel
        
         public LoginViewModel() 
         {
-
+            
         }
 
         [ObservableProperty]

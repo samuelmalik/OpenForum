@@ -28,7 +28,7 @@
         </Image>
         <Frame BorderColor="#E94560" BackgroundColor="Transparent" Padding="0">
             <Entry PlaceholderColor="#E94560" TextColor="#E94560"
-                   Placeholder="Username">
+                   Placeholder="Username" Text="{Binding Username}">
                 <Entry.Triggers>
                     <Trigger TargetType="Entry"
                              Property="IsFocused"
@@ -52,7 +52,7 @@
         </Image>
         <Frame BorderColor="#E94560" BackgroundColor="Transparent" Padding="0" >
             <Entry PlaceholderColor="#E94560" TextColor="#E94560" 
-                   Placeholder="Password" IsPassword="True">
+                   Placeholder="Password" IsPassword="True" Text="{Binding Password}">
                 <Entry.Triggers>
                     <Trigger TargetType="Entry"
                              Property="IsFocused"
