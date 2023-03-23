@@ -2,6 +2,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="OpenForum.View.ForumPage"
+             xmlns:viewmodel="clr-namespace:OpenForum.ViewModel"
+             x:DataType="viewmodel:ForumViewModel"
              BackgroundColor="#16213E">
 
     <Grid ColumnDefinitions="auto,*"
@@ -11,10 +13,12 @@
         <VerticalStackLayout BackgroundColor="#0F3460" Grid.ColumnSpan="2" Grid.Column="0" Grid.Row="0" Margin="0" VerticalOptions="Center">
             <Image Source="of_logo_v1_1.png"
                    WidthRequest="65" Margin="5"/>
+            
         </VerticalStackLayout>
 
         <HorizontalStackLayout BackgroundColor="#533483" Grid.Column="0" Grid.Row="1" >
             <VerticalStackLayout Padding="20" Spacing="25">
+                <Label Text="{Binding Pouzivatel.Name}" TextColor="red"/>
                 <Image WidthRequest="30" HeightRequest="30" HorizontalOptions="Start">
                     <Image.Source>
                         <FontImageSource FontFamily="FAS" Glyph="&#x3f;" Color="#E94560"/>

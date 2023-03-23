@@ -31,6 +31,9 @@ public static class MauiProgram
         builder.Services.AddSingleton<ForumViewModel>();
         builder.Services.AddSingleton<ForumPage>();
 
+		builder.Services.AddTransient<ForumPage>();
+		builder.Services.AddTransient<ForumViewModel>();
+
         return builder.Build();
 	}
 }

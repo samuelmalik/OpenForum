@@ -1,5 +1,7 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
+﻿
+using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using OpenForum.Model;
 using OpenForum.View;
 using System;
 using System.Collections.Generic;
@@ -26,7 +28,13 @@ namespace OpenForum.ViewModel
         [RelayCommand]
         void OnLogin()
         {
-            Shell.Current.GoToAsync(nameof(ForumPage));
+            User usr = new User(Username, Password);
+
+            Shell.Current.GoToAsync($"{nameof(ForumPage)}", new Dictionary<string, object>
+            {
+                {"CurrentUser", usr }
+            });
+
         }
         
 

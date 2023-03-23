@@ -6,8 +6,14 @@ using System.Threading.Tasks;
 
 namespace OpenForum.Model
 {
-    class User
+    public class User
     {
+
+        public User(string n, string p) 
+        {
+            this.Name = n;
+            this.Pass = p;
+        }
         public string Name { get; set; }
         public string Pass { get; set; }
     }
