@@ -8,17 +8,23 @@
 
     <Grid ColumnDefinitions="auto,*"
           RowDefinitions="auto,*,auto">
-        
-        
-        <VerticalStackLayout BackgroundColor="#0F3460" Grid.ColumnSpan="2" Grid.Column="0" Grid.Row="0" Margin="0" VerticalOptions="Center">
+
+
+        <Grid
+            BackgroundColor="#0F3460"  Grid.Column="1" Grid.Row="0" Margin="0" VerticalOptions="Center" HeightRequest="50">
             <Image Source="of_logo_v1_1.png"
                    WidthRequest="65" Margin="5"/>
             
-        </VerticalStackLayout>
+        </Grid>
 
-        <HorizontalStackLayout BackgroundColor="#533483" Grid.Column="0" Grid.Row="1" >
+        <HorizontalStackLayout BackgroundColor="#533483" Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" >
             <VerticalStackLayout Padding="20" Spacing="25">
+                
+                <!--testing User object passing
                 <Label Text="{Binding Pouzivatel.Name}" TextColor="red"/>
+                -->
+                
+                
                 <Image WidthRequest="30" HeightRequest="30" HorizontalOptions="Start">
                     <Image.Source>
                         <FontImageSource FontFamily="FAS" Glyph="&#x3f;" Color="#E94560"/>
