@@ -8,5 +8,8 @@ namespace OpenForum.Model
 {
     class Post
     {
+        public string Author { get; set; }
+        public string Title { get; set; }
+        public string Message { get; set; }
     }
 }

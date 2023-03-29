@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:model="clr-namespace:OpenForum.Model"
              x:Class="OpenForum.View.ForumPage"
              xmlns:viewmodel="clr-namespace:OpenForum.ViewModel"
              x:DataType="viewmodel:ForumViewModel"
              BackgroundColor="#16213E">
 
-    <Grid ColumnDefinitions="auto,*"
+    <Grid ColumnDefinitions="auto,*,auto"
           RowDefinitions="auto,*,auto">
 
 
@@ -14,17 +15,17 @@
             BackgroundColor="#0F3460"  Grid.Column="1" Grid.Row="0" Margin="0" VerticalOptions="Center" HeightRequest="50">
             <Image Source="of_logo_v1_1.png"
                    WidthRequest="65" Margin="5"/>
-            
+
         </Grid>
 
         <HorizontalStackLayout BackgroundColor="#533483" Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" >
             <VerticalStackLayout Padding="20" Spacing="25">
-                
+
                 <!--testing User object passing
                 <Label Text="{Binding Pouzivatel.Name}" TextColor="red"/>
                 -->
-                
-                
+
+
                 <Image WidthRequest="30" HeightRequest="30" HorizontalOptions="Start">
                     <Image.Source>
                         <FontImageSource FontFamily="FAS" Glyph="&#x3f;" Color="#E94560"/>
@@ -36,7 +37,7 @@
                         <FontImageSource FontFamily="FAS" Glyph="&#xf02d;" Color="#E94560"/>
                     </Image.Source>
                 </Image>
-                
+
                 <Image WidthRequest="30" HeightRequest="30" HorizontalOptions="Start">
                     <Image.Source>
                         <FontImageSource FontFamily="FAS" Glyph="&#xf14a;" Color="#E94560"/>
@@ -51,7 +52,7 @@
 
             </VerticalStackLayout>
         </HorizontalStackLayout>
-        
+
         <HorizontalStackLayout Grid.Column="0" Grid.Row="2" BackgroundColor="#533483" Padding="20">
             <Image WidthRequest="30" HeightRequest="30" HorizontalOptions="Start">
                 <Image.Source>
@@ -59,7 +60,38 @@
                 </Image.Source>
             </Image>
         </HorizontalStackLayout>
+        <CollectionView Grid.Column="1" Grid.Row="1"  Grid.RowSpan="2" Margin="30">
+            <CollectionView.ItemsSource>
+                <x:Array Type="{x:Type model:Post}">
+                    <model:Post Author="Jozko" Title="Nejde mi internet" Message="pomoc pls"/>
+                    <model:Post Author="Misko" Title="Nemam co jest" Message="poslite koruny"/>
+                    <model:Post Author="Riso" Title="Nemam na boty" Message="sandra>>>>"/>
+                    <model:Post Author="Ceniga" Title="Nemam zuvak a zmysel zivota" Message="Potrebujem poradit kde kupit Velo"/>
+                    <model:Post Author="Samo" Title="Nemam frajerku a nemozem cvicit" Message="Neviem si najst frajerku, nemozem cvicit, aky ma zivot zmysel ? "/>
+                </x:Array>
+            </CollectionView.ItemsSource>
+
+
+            <CollectionView.ItemTemplate  >
+                <DataTemplate x:DataType="model:Post">
+                    <Grid ColumnDefinitions="*"
+                          RowDefinitions="auto"
+                          Padding="0,0,0,20"
+                          Background="Transparent">
+                        <Frame Grid.Column="0" Grid.Row="0" BorderColor="#E94560" Padding="0" >
+                            <VerticalStackLayout Padding="30" BackgroundColor="#0F3460">
+                                <Label FontFamily="Arial" Margin="5" FontSize="20" FontAttributes="Italic" Text="{Binding Author }" VerticalOptions="Start"/>
+                                <Label FontFamily="Arial" Margin="5" FontSize="50" FontAttributes="Bold" Text="{Binding Title}" VerticalOptions="Center"/>
+                                <Label FontFamily="Arial"  Margin="5" FontSize="30" Text="{Binding Message}" VerticalOptions="End" />
+                            </VerticalStackLayout>
+                        </Frame>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+
     </Grid>
-    
-    
+
+
 </ContentPage>

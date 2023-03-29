@@ -16,8 +16,11 @@ namespace OpenForum.ViewModel
        
         public LoginViewModel() 
         {
-            
+            ShowErrorMessage = false;
         }
+
+        [ObservableProperty]
+        bool showErrorMessage;
 
         [ObservableProperty]
         string username;
@@ -28,8 +31,16 @@ namespace OpenForum.ViewModel
         [RelayCommand]
         void OnLogin()
         {
-            User usr = new User(Username, Password);
+            if (Username == null || Password == null)
+            {
+                ShowErrorMessage = true; return;    
+            }
+            ShowErrorMessage = false;
 
+
+
+            // create currentUser and pass to ForumPage
+            User usr = new User(Username, Password);
             Shell.Current.GoToAsync($"{nameof(ForumPage)}", new Dictionary<string, object>
             {
                 {"CurrentUser", usr }
