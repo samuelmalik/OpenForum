@@ -37,6 +37,9 @@ public static class MauiProgram
 		builder.Services.AddSingleton<RegisterPage>();
 		builder.Services.AddSingleton<RegisterViewModel>();
 
+        builder.Services.AddTransient<RegisterPage>();
+        builder.Services.AddTransient<RegisterViewModel>();
+
         return builder.Build();
 	}
 }

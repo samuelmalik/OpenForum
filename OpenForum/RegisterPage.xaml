@@ -4,16 +4,18 @@
              x:Class="OpenForum.RegisterPage"
              xmlns:viewmodel="clr-namespace:OpenForum.ViewModel"
              x:DataType="viewmodel:RegisterViewModel"
+             Background="#16213E"
              >
     <ContentPage.Content>
-        <VerticalStackLayout Padding="50,10,50,0" Spacing="15" WidthRequest="300" HeightRequest="550">
+        <ScrollView>
+        <VerticalStackLayout Padding="50,10,50,0" Spacing="15" WidthRequest="300" HeightRequest="550" VerticalOptions="Start">
 
 
             <!-- Logo and text -->
-            <Image Source="of_logo.png"
-               WidthRequest="150" HeightRequest="150"/>
-            <Label Text="Register to OpenForum" HorizontalTextAlignment="Center" VerticalTextAlignment="Start" FontAttributes="Bold" FontSize="18"
-                HeightRequest="25"/>
+            <Image Source="of_logo_v1_1.png"
+               WidthRequest="150" />
+            <Label Text="Register to OpenForum" HorizontalTextAlignment="Center"  VerticalTextAlignment="Start" FontAttributes="Bold" FontSize="18"
+                />
 
             <!-- Username -->
 
@@ -83,5 +85,6 @@
                 />
 
         </VerticalStackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

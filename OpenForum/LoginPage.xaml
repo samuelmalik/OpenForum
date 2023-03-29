@@ -7,9 +7,7 @@
              BackgroundColor="#16213E"
              >
 
-    
-
-
+    <ScrollView>
     <VerticalStackLayout Padding="50,10,50,0" Spacing="15" WidthRequest="300" HeightRequest="550" VerticalOptions="Start">
         
         
@@ -84,9 +82,11 @@
         <!-- Register button-->
         <Button Text="Register" TextColor="#E94560"
                 BackgroundColor="Transparent" BorderColor="Transparent"
-                WidthRequest="80" HeightRequest="0" Padding="0" Margin="-20"/>
+                WidthRequest="80" HeightRequest="0" Padding="0" Margin="-20"
+                Command="{Binding RegisterCommand}"/>
 
     </VerticalStackLayout>
+    </ScrollView>
 
 
 </ContentPage>

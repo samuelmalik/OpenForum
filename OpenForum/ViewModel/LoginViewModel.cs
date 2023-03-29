@@ -43,6 +43,12 @@ namespace OpenForum.ViewModel
         }
 
 
+
+        [RelayCommand]
+        void OnRegister()
+        {
+            Shell.Current.GoToAsync($"{nameof(RegisterPage)}");
+        }
         
 
     }

@@ -21,9 +21,6 @@
         <HorizontalStackLayout BackgroundColor="#533483" Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" >
             <VerticalStackLayout Padding="20" Spacing="25">
 
-                <!--testing User object passing
-                <Label Text="{Binding Pouzivatel.Name}" TextColor="red"/>
-                -->
 
 
                 <Image WidthRequest="30" HeightRequest="30" HorizontalOptions="Start">
