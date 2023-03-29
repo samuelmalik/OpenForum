@@ -8,17 +8,13 @@ using System.Threading.Tasks;
 
 namespace OpenForum.ViewModel
 {
-    [QueryProperty("Pouzivatel", "CurrentUser")]
     public partial class ForumViewModel : ObservableObject
     {
 
 
         public ForumViewModel() 
         {
-         
         }
 
-        [ObservableProperty]
-        User pouzivatel;
     }
 }

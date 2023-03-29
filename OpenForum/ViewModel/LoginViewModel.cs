@@ -40,11 +40,7 @@ namespace OpenForum.ViewModel
 
 
             // create currentUser and pass to ForumPage
-            User usr = new User(Username, Password);
-            Shell.Current.GoToAsync($"{nameof(ForumPage)}", new Dictionary<string, object>
-            {
-                {"CurrentUser", usr }
-            });
+            Shell.Current.GoToAsync($"{nameof(ForumPage)}");
 
         }
         
