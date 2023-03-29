@@ -37,12 +37,12 @@ namespace OpenForum.ViewModel
             }
             ShowErrorMessage = false;
 
-
-
-            // create currentUser and pass to ForumPage
+            // navigate to ForumPage
             Shell.Current.GoToAsync($"{nameof(ForumPage)}");
 
         }
+
+
         
 
     }

@@ -1,9 +1,12 @@
+using OpenForum.ViewModel;
+
 namespace OpenForum;
 
 public partial class RegisterPage : ContentPage
 {
-	public RegisterPage()
+	public RegisterPage(RegisterViewModel viewModel)
 	{
 		InitializeComponent();
+		BindingContext = viewModel;
 	}
 }
