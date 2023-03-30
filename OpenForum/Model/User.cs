@@ -8,6 +8,8 @@ namespace OpenForum.Model
 {
     public class User
     {
+        public static List<User> All = new List<User>();
+        public static int currentUserID;
 
         public User(string n, string p) 
         {

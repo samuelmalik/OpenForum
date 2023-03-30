@@ -26,7 +26,7 @@
             </Image>
             <Frame BorderColor="#E94560" BackgroundColor="Transparent" Padding="0">
                 <Entry PlaceholderColor="#E94560" TextColor="#E94560"
-                   Placeholder="Create username" Text="">
+                   Placeholder="Create username" Text="{Binding Username}">
                     <Entry.Triggers>
                         <Trigger TargetType="Entry"
                              Property="IsFocused"
@@ -41,7 +41,11 @@
                 </Entry>
             </Frame>
 
-            <!-- Password -->
+                <Label Text="Username already exist!!!" TextColor="Red" 
+               HorizontalOptions="Center" HorizontalTextAlignment="Center" Padding="0" Margin="0,-10,0,-10"
+               IsVisible="{Binding UsernameExist}"/>
+
+                <!-- Password -->
 
             <Image WidthRequest="25" HeightRequest="25" HorizontalOptions="Start" Margin="0,0,0,-12">
                 <Image.Source>
@@ -50,7 +54,7 @@
             </Image>
             <Frame BorderColor="#E94560" BackgroundColor="Transparent" Padding="0" >
                 <Entry PlaceholderColor="#E94560" TextColor="#E94560"
-                   Placeholder="Create password" IsPassword="True" Text="">
+                   Placeholder="Create password" IsPassword="True" Text="{Binding Password}">
                     <Entry.Triggers>
                         <Trigger TargetType="Entry"
                              Property="IsFocused"
@@ -64,7 +68,13 @@
                     </Entry.Triggers>
                 </Entry>
             </Frame>
-            <!-- Confirm Password -->
+            
+            <!-- Short password -->
+                <Label Text="Password must be at least 6 characters long" TextColor="Red" 
+               HorizontalOptions="Center" HorizontalTextAlignment="Center" Padding="0" Margin="0,-10,0,-10"
+               IsVisible="{Binding PasswordIsShort}"/>
+
+                <!-- Confirm Password -->
 
             <Image WidthRequest="25" HeightRequest="25" HorizontalOptions="Start" Margin="0,0,0,-12">
                 <Image.Source>
@@ -73,18 +83,26 @@
             </Image>
             <Frame BorderColor="#E94560" BackgroundColor="Transparent" Padding="0" >
                 <Entry PlaceholderColor="#E94560" TextColor="#E94560"
-                   Placeholder="Confirm password" IsPassword="True" Text="">
+                   Placeholder="Confirm password" IsPassword="True" Text="{Binding Password2}">
                 </Entry>
             </Frame>
+            
+            <!-- Wrong password -->
+               <Label Text="Passwword don't match!!!" TextColor="Red" 
+               HorizontalOptions="Center" HorizontalTextAlignment="Center" Padding="0" Margin="0,-10,0,-10"
+               IsVisible="{Binding PasswordsDontMatch}"/>
 
-            <!-- Login button -->
+                <!-- Register button -->
             <Button Text="Register"
                 WidthRequest="100" HeightRequest="20"
                 BackgroundColor="#E94560" TextColor="#16213E" FontAttributes="Bold"
                 Margin="0,20,0,0"
+                Command="{Binding RegisterCommand}"
                 />
 
-        </VerticalStackLayout>
+              
+            
+            </VerticalStackLayout>
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>
