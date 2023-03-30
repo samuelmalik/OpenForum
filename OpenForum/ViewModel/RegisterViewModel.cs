@@ -34,16 +34,7 @@ namespace OpenForum.ViewModel
         [RelayCommand]
         void Register()
         {
-            // check if username exist
-            foreach (var user in User.All)
-            {
-                if (user.Name == Username)
-                {
-                    UsernameExist = true;
-                    return;
-                }
-            }
-            UsernameExist = false;
+            
 
             // check if username isn't null
             if (Username is null)
@@ -51,7 +42,21 @@ namespace OpenForum.ViewModel
                 UsernameExist = true;
                 return;
             }
-            UsernameExist = false;
+            else
+            {
+                // check if username exist
+                foreach (var user in User.All)
+                {
+
+                    if (user.Name == Username)
+                    {
+                        UsernameExist = true;
+                        return;
+
+                    }
+                }
+            }
+            
 
             // check if password is long enough
             if (Password.Length < 6)
@@ -69,7 +74,10 @@ namespace OpenForum.ViewModel
             }
             PasswordsDontMatch = false;
 
+            // create new User and append to User.All
+            User.AddUser(Username, Password);
 
+            // navigate back to log in
             Shell.Current.GoToAsync("..");
         }
     }

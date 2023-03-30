@@ -11,6 +11,11 @@ namespace OpenForum.Model
         public static List<User> All = new List<User>();
         public static int currentUserID;
 
+       public static void AddUser(string name, string pass)
+        {
+            All.Add(new User(name, pass));
+        }
+
         public User(string n, string p) 
         {
             this.Name = n;
