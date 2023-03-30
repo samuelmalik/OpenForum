@@ -34,22 +34,6 @@ namespace OpenForum.ViewModel
         [RelayCommand]
         void Register()
         {
-            // check if password is long enough
-            if (Password.Length < 6)
-            {
-                PasswordIsShort = true;
-                return;
-            }
-            PasswordIsShort = false;
-
-            // check if passwords match
-            if (Password != Password2)
-            {
-                PasswordsDontMatch = true;
-                return;
-            }
-            PasswordsDontMatch = false;
-
             // check if username exist
             foreach (var user in User.All)
             {
@@ -68,6 +52,23 @@ namespace OpenForum.ViewModel
                 return;
             }
             UsernameExist = false;
+
+            // check if password is long enough
+            if (Password.Length < 6)
+            {
+                PasswordIsShort = true;
+                return;
+            }
+            PasswordIsShort = false;
+
+            // check if passwords match
+            if (Password != Password2)
+            {
+                PasswordsDontMatch = true;
+                return;
+            }
+            PasswordsDontMatch = false;
+
 
             Shell.Current.GoToAsync("..");
         }

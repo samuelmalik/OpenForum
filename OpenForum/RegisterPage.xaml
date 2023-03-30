@@ -68,8 +68,8 @@
                     </Entry.Triggers>
                 </Entry>
             </Frame>
-            
-            <!-- Short password -->
+
+                <!-- Short password -->
                 <Label Text="Password must be at least 6 characters long" TextColor="Red" 
                HorizontalOptions="Center" HorizontalTextAlignment="Center" Padding="0" Margin="0,-10,0,-10"
                IsVisible="{Binding PasswordIsShort}"/>
