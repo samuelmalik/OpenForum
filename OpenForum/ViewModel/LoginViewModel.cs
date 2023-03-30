@@ -31,14 +31,27 @@ namespace OpenForum.ViewModel
         [RelayCommand]
         void OnLogin()
         {
-            if (Username == null || Password == null)
+            if (Username == null)
             {
                 ShowErrorMessage = true; return;    
-            }
-            ShowErrorMessage = false;
+            } else
+            {
+                for (int i = 0; i < User.All.Count; i++)
+                {
+                    if (User.All[i].Name == Username && User.All[i].Pass == Password)
+                    {
+                        ShowErrorMessage = false;
+                        // navigate to ForumPage
+                        Shell.Current.GoToAsync($"{nameof(ForumPage)}");
+                        return;
+                    }
+                }
+                ShowErrorMessage = true;
 
-            // navigate to ForumPage
-            Shell.Current.GoToAsync($"{nameof(ForumPage)}");
+            }
+
+
+
 
         }
 
@@ -47,6 +60,7 @@ namespace OpenForum.ViewModel
         [RelayCommand]
         void OnRegister()
         {
+            ShowErrorMessage = false;
             Shell.Current.GoToAsync($"{nameof(RegisterPage)}");
         }
         
