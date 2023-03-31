@@ -6,6 +6,9 @@
              xmlns:viewmodel="clr-namespace:OpenForum.ViewModel"
              x:DataType="viewmodel:ForumViewModel"
              BackgroundColor="#16213E">
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior IsVisible="False"/>
+    </Shell.BackButtonBehavior>
 
     <Grid ColumnDefinitions="auto,*,auto"
           RowDefinitions="auto,*,auto">

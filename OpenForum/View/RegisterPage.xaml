@@ -6,6 +6,10 @@
              x:DataType="viewmodel:RegisterViewModel"
              Background="#16213E"
              >
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior IsVisible="False"/>
+    </Shell.BackButtonBehavior>
+    
     <ContentPage.Content>
         <ScrollView>
         <VerticalStackLayout Padding="50,10,50,0" Spacing="15" WidthRequest="300" HeightRequest="550" VerticalOptions="Start">

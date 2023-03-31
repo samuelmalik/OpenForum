@@ -31,11 +31,8 @@ namespace OpenForum.ViewModel
         [RelayCommand]
         void OnLogin()
         {
-            if (Username == null)
-            {
-                ShowErrorMessage = true; return;    
-            } else
-            {
+            
+            
                 for (int i = 0; i < User.All.Count; i++)
                 {
                     if (User.All[i].Name == Username && User.All[i].Pass == Password)
@@ -49,7 +46,7 @@ namespace OpenForum.ViewModel
                 }
                 ShowErrorMessage = true;
 
-            }
+            
 
 
 
