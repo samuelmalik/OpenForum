@@ -51,28 +51,16 @@
 	<ItemGroup>
 	  <AndroidResource Remove="NewFolder1\**" />
 	  <AndroidResource Remove="NewFolder2\**" />
-	  <AndroidResource Remove="NewFolder\**" />
-	  <AndroidResource Remove="View\**" />
 	  <Compile Remove="NewFolder1\**" />
 	  <Compile Remove="NewFolder2\**" />
-	  <Compile Remove="NewFolder\**" />
-	  <Compile Remove="View\**" />
 	  <EmbeddedResource Remove="NewFolder1\**" />
 	  <EmbeddedResource Remove="NewFolder2\**" />
-	  <EmbeddedResource Remove="NewFolder\**" />
-	  <EmbeddedResource Remove="View\**" />
 	  <MauiCss Remove="NewFolder1\**" />
 	  <MauiCss Remove="NewFolder2\**" />
-	  <MauiCss Remove="NewFolder\**" />
-	  <MauiCss Remove="View\**" />
 	  <MauiXaml Remove="NewFolder1\**" />
 	  <MauiXaml Remove="NewFolder2\**" />
-	  <MauiXaml Remove="NewFolder\**" />
-	  <MauiXaml Remove="View\**" />
 	  <None Remove="NewFolder1\**" />
 	  <None Remove="NewFolder2\**" />
-	  <None Remove="NewFolder\**" />
-	  <None Remove="View\**" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -93,19 +81,22 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="LoginPage.xaml.cs">
+	  <Compile Update="View\LoginPage.xaml.cs">
+	    <DependentUpon>%(Filename)</DependentUpon>
+	  </Compile>
+	  <Compile Update="View\ForumPage.xaml.cs">
 	    <DependentUpon>%(Filename)</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="ForumPage.xaml">
+	  <MauiXaml Update="View\LoginPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="LoginPage.xaml">
+	  <MauiXaml Update="View\RegisterPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="RegisterPage.xaml">
+	  <MauiXaml Update="View\ForumPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

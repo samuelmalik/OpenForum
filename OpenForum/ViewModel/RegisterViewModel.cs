@@ -13,7 +13,7 @@ namespace OpenForum.ViewModel
     public partial class RegisterViewModel : ObservableObject
     {
         [ObservableProperty]
-        string username;
+        string username = "";
 
         [ObservableProperty]
         string password = "";
@@ -34,16 +34,17 @@ namespace OpenForum.ViewModel
         [RelayCommand]
         void Register()
         {
-            
-
+            PasswordsDontMatch = false;
+            PasswordIsShort = false;
+            UsernameExist = false;
             // check if username isn't null
-            if (Username is null)
+            if (Username == "")
             {
                 UsernameExist = true;
                 return;
-            }
-            else
+            } else
             {
+                UsernameExist = false;
                 // check if username exist
                 foreach (var user in User.All)
                 {
@@ -56,7 +57,8 @@ namespace OpenForum.ViewModel
                     }
                 }
             }
-            
+
+
 
             // check if password is long enough
             if (Password.Length < 6)
