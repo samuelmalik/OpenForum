@@ -41,6 +41,7 @@ namespace OpenForum.ViewModel
                     if (User.All[i].Name == Username && User.All[i].Pass == Password)
                     {
                         ShowErrorMessage = false;
+                        User.currentUserID = i;
                         // navigate to ForumPage
                         Shell.Current.GoToAsync($"{nameof(ForumPage)}");
                         return;
