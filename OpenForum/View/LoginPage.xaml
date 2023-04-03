@@ -80,10 +80,8 @@
 
 
         <!-- Register button-->
-            <Label Text="Register" TextColor="#E94560"
-                BackgroundColor="Transparent"
-                WidthRequest="80" HeightRequest="0" Padding="0" Margin="-20"
-                >
+            <Label Text="Register" TextColor="#E94560" FontSize="16"
+                   HorizontalOptions="Center">
                 <Label.GestureRecognizers>
                     <TapGestureRecognizer Command="{Binding RegisterCommand}"/>
                 </Label.GestureRecognizers>
