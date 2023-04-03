@@ -28,8 +28,11 @@
 
                 <Image WidthRequest="30" HeightRequest="30" HorizontalOptions="Start">
                     <Image.Source>
-                        <FontImageSource FontFamily="FAS" Glyph="&#x3f;" Color="#E94560"/>
+                        <FontImageSource FontFamily="FAS" Glyph="&#x3f;" Color="#B9005B"/>
                     </Image.Source>
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding NavigateToMaterialsCommand}"/>
+                    </Image.GestureRecognizers>
                 </Image>
 
                 <Image WidthRequest="30" HeightRequest="30" HorizontalOptions="Start">
@@ -58,6 +61,9 @@
                 <Image.Source>
                     <FontImageSource FontFamily="FAS" Glyph="&#xf007;" Color="#E94560"/>
                 </Image.Source>
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding NavigateToMaterialsCommand}"/>
+                </Image.GestureRecognizers>
             </Image>
         </HorizontalStackLayout>
         <CollectionView Grid.Column="1" Grid.Row="1"  Grid.RowSpan="2" Margin="30">
@@ -78,8 +84,8 @@
                           RowDefinitions="auto"
                           Padding="0,0,0,20"
                           Background="Transparent">
-                        <Frame Grid.Column="0" Grid.Row="0" BorderColor="#E94560" Padding="0" >
-                            <VerticalStackLayout Padding="30" BackgroundColor="#0F3460">
+                        <Frame Grid.Column="0" Grid.Row="0" BorderColor="#E94560" Padding="0">
+                            <VerticalStackLayout Padding="30" BackgroundColor="#0F3460" MaximumHeightRequest="200">
                                 <Label FontFamily="Arial" Margin="5" FontSize="20" FontAttributes="Italic" Text="{Binding Author }" VerticalOptions="Start"/>
                                 <Label FontFamily="Arial" Margin="5" FontSize="50" FontAttributes="Bold" Text="{Binding Title}" VerticalOptions="Center"/>
                                 <Label FontFamily="Arial"  Margin="5" FontSize="30" Text="{Binding Message}" VerticalOptions="End" />

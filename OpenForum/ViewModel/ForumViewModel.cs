@@ -1,4 +1,5 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 using OpenForum.Model;
 using System;
 using System.Collections.Generic;
@@ -14,6 +15,12 @@ namespace OpenForum.ViewModel
 
         public ForumViewModel() 
         {
+        }
+
+        [RelayCommand]
+        void NavigateToMaterials()
+        {
+            Shell.Current.GoToAsync($"{nameof(MaterialsPage)}");
         }
 
     }
