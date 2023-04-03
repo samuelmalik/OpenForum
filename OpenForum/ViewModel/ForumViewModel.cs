@@ -20,7 +20,7 @@ namespace OpenForum.ViewModel
         [RelayCommand]
         void NavigateToMaterials()
         {
-            Shell.Current.GoToAsync($"{nameof(MaterialsPage)}");
+            Shell.Current.GoToAsync($"{nameof(MaterialsPage)}", false);
         }
 
     }
