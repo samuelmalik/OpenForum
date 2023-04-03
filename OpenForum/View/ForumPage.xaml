@@ -26,19 +26,21 @@
 
 
 
+                <!--Forum page-->
                 <Image WidthRequest="30" HeightRequest="30" HorizontalOptions="Start">
                     <Image.Source>
                         <FontImageSource FontFamily="FAS" Glyph="&#x3f;" Color="#B9005B"/>
                     </Image.Source>
-                    <Image.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding NavigateToMaterialsCommand}"/>
-                    </Image.GestureRecognizers>
                 </Image>
 
+                <!--Materials Page-->
                 <Image WidthRequest="30" HeightRequest="30" HorizontalOptions="Start">
                     <Image.Source>
                         <FontImageSource FontFamily="FAS" Glyph="&#xf02d;" Color="#E94560"/>
                     </Image.Source>
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding NavigateToMaterialsCommand}"/>
+                    </Image.GestureRecognizers>
                 </Image>
 
                 <Image WidthRequest="30" HeightRequest="30" HorizontalOptions="Start">
@@ -56,14 +58,13 @@
             </VerticalStackLayout>
         </HorizontalStackLayout>
 
+        
+        <!--User info-->
         <HorizontalStackLayout Grid.Column="0" Grid.Row="2" BackgroundColor="#533483" Padding="20">
             <Image WidthRequest="30" HeightRequest="30" HorizontalOptions="Start">
                 <Image.Source>
                     <FontImageSource FontFamily="FAS" Glyph="&#xf007;" Color="#E94560"/>
                 </Image.Source>
-                <Image.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding NavigateToMaterialsCommand}"/>
-                </Image.GestureRecognizers>
             </Image>
         </HorizontalStackLayout>
         <CollectionView Grid.Column="1" Grid.Row="1"  Grid.RowSpan="2" Margin="30">
