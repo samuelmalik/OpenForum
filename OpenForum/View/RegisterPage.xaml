@@ -7,7 +7,7 @@
              Background="#16213E"
              >
     <Shell.BackButtonBehavior>
-        <BackButtonBehavior IsVisible="False"/>
+        <BackButtonBehavior IsVisible="True"/>
     </Shell.BackButtonBehavior>
     
     <ContentPage.Content>

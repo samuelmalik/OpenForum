@@ -23,10 +23,10 @@ namespace OpenForum.ViewModel
         bool showErrorMessage;
 
         [ObservableProperty]
-        string username;
+        string username = "";
 
         [ObservableProperty]
-        string password;
+        string password = "";
 
         [RelayCommand]
         void OnLogin()
@@ -40,6 +40,8 @@ namespace OpenForum.ViewModel
                         ShowErrorMessage = false;
                         User.currentUserID = i;
                         // navigate to ForumPage
+                        Username = "";
+                        Password = "";
                         Shell.Current.GoToAsync($"{nameof(ForumPage)}");
                         return;
                     }
