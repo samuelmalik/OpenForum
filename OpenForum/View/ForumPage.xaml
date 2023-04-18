@@ -12,7 +12,7 @@
 
     <Grid ColumnDefinitions="auto,*,auto"
           RowDefinitions="auto,*,auto"
-          IsVisible="false">
+          IsVisible="true">
 
 
         <Grid

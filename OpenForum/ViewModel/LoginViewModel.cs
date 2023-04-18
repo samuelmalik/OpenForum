@@ -29,30 +29,23 @@ namespace OpenForum.ViewModel
         [ObservableProperty]
         string password = "";
 
-        [ObservableProperty]
-        string test = UserService.GetPassword();
-
-
 
 
         [RelayCommand]
         void OnLogin()
         {
-            
-            
-                for (int i = 0; i < User.All.Count; i++)
-                {
-                    if (User.All[i].Name == Username && User.All[i].Pass == Password)
+   
+                    if (UserService.GetPassword(Username) == Password)
                     {
                         ShowErrorMessage = false;
-                        User.currentUserID = i;
+                        //User.currentUserID = i;
                         // navigate to ForumPage
                         Username = "";
                         Password = "";
                         Shell.Current.GoToAsync($"{nameof(ForumPage)}");
                         return;
                     }
-                }
+                
                 ShowErrorMessage = true;
 
             

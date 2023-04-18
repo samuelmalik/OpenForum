@@ -13,7 +13,7 @@ namespace OpenForum.Service
     {
         public static string connectionString = "server=localhost;database=open_forum_db;username=root;password=password";
 
-        public static string GetPassword()
+        public static string GetPassword(string username)
         {
             string password = null;
 
@@ -23,16 +23,19 @@ namespace OpenForum.Service
             {
                 connection.Open();
 
-                string query = "SELECT usr_password FROM users WHERE username = 'zasko789'";
+                // query
+                string query = "SELECT usr_password FROM users WHERE username = @Username";
 
+                // command and parameters
                 using (MySqlCommand command = new MySqlCommand(query, connection))
                 {
+                    command.Parameters.AddWithValue("@Username", username);
 
                     using (MySqlDataReader reader = command.ExecuteReader())
                     {
                         if (reader.Read())
                         {
-                            password = reader.GetString(0);
+                            password = reader["usr_password"].ToString();
                         }
                     }
                 }
