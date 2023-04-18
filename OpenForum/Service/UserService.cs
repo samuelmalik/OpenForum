@@ -12,7 +12,6 @@ namespace OpenForum.Service
     public class UserService
     {
         public static string connectionString = "server=localhost;database=open_forum_db;username=root;password=password";
-
         public static string GetPassword(string username)
         {
             string password = null;
