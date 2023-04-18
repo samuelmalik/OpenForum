@@ -77,7 +77,7 @@ namespace OpenForum.ViewModel
             PasswordsDontMatch = false;
 
             // create new User and append to User.All
-            User.AddUser(Username, Password);
+
 
             // navigate back to log in
             Shell.Current.GoToAsync("..");

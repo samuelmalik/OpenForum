@@ -26,7 +26,7 @@
         </Image>
         <Frame BorderColor="#E94560" BackgroundColor="Transparent" Padding="0">
             <Entry PlaceholderColor="#E94560" TextColor="#E94560"
-                   Placeholder="Username" Text="{Binding Username}">
+                   Placeholder="{Binding Test}" Text="{Binding Username}">
                 <Entry.Triggers>
                     <Trigger TargetType="Entry"
                              Property="IsFocused"

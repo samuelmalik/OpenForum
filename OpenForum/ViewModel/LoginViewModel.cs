@@ -2,6 +2,7 @@
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using OpenForum.Model;
+using OpenForum.Service;
 using OpenForum.View;
 using System;
 using System.Collections.Generic;
@@ -27,6 +28,12 @@ namespace OpenForum.ViewModel
 
         [ObservableProperty]
         string password = "";
+
+        [ObservableProperty]
+        string test = UserService.GetPassword();
+
+
+
 
         [RelayCommand]
         void OnLogin()

@@ -11,7 +11,8 @@
     </Shell.BackButtonBehavior>
 
     <Grid ColumnDefinitions="auto,*,auto"
-          RowDefinitions="auto,*,auto">
+          RowDefinitions="auto,*,auto"
+          IsVisible="false">
 
 
         <Grid
