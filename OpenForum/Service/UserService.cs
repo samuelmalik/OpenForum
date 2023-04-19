@@ -12,12 +12,11 @@ namespace OpenForum.Service
     public class UserService
     {
         public static string connectionString = "server=localhost;database=open_forum_db;username=root;password=password";
+        
+        // get password by username
         public async static Task<string> GetPassword(string username)
         {
             string password = null;
-
-
-
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
                 await connection.OpenAsync();
@@ -39,11 +38,35 @@ namespace OpenForum.Service
                     }
                 }
             }
-
-
-
-
             return password;
+        }
+
+        // get user id by username
+        public async static Task<int> GetId(string username)
+        {
+            int id = 0;
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+                await connection.OpenAsync();
+
+                // query
+                string query = "SELECT user_id FROM users WHERE username = @Username";
+
+                // command and parameters
+                using (MySqlCommand command = new MySqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Username", username);
+
+                    using (MySqlDataReader reader = await command.ExecuteReaderAsync())
+                    {
+                        if (await reader.ReadAsync())
+                        {
+                            id = Convert.ToInt32(reader["user_id"]);
+                        }
+                    }
+                }
+            }
+            return id;
         }
     }
 }

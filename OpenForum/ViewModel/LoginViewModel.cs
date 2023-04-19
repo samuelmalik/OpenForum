@@ -44,7 +44,8 @@ namespace OpenForum.ViewModel
                 if (userPassword == Password)
                 {
                     ShowErrorMessage = false;
-                    //User.currentUserID = i;
+                    User.currentUserID = await UserService.GetId(Username);
+                   
                     // navigate to ForumPage
                     Username = "";
                     Password = "";
