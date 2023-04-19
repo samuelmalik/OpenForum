@@ -71,6 +71,8 @@ namespace OpenForum.Service
 
         // return if username exist
         public async static Task<bool> UsernameExist(string username)
+
+
         {
             string usernameInDB = null;
             using (MySqlConnection connection = new MySqlConnection(connectionString))
@@ -95,6 +97,21 @@ namespace OpenForum.Service
                 }
             }
             return username == usernameInDB;
+        }
+
+        // add new user to database
+        public async static Task AddUser(User user)
+        {
+            using MySqlConnection connection = new MySqlConnection(connectionString);
+            string sql = "INSERT INTO users (username, usr_password, is_admin, xp) VALUES (@username, @usr_password, @is_admin, @xp)";
+            using MySqlCommand command = new MySqlCommand(sql, connection);
+            command.Parameters.AddWithValue("@username", user.Name);
+            command.Parameters.AddWithValue("@usr_password", user.Pass);
+            command.Parameters.AddWithValue("@is_admin", user.IsAdmin);
+            command.Parameters.AddWithValue("@xp", user.Xp);
+
+            await connection.OpenAsync();
+            await command.ExecuteNonQueryAsync();
         }
     }
         

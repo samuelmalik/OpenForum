@@ -12,15 +12,18 @@ namespace OpenForum.Model
         public static int currentUserID;
 
 
-        public User(string n, string p) 
+        public User(string n, string p, int admin, int exp) 
         {
             this.Name = n;
             this.Pass = p;
+            this.IsAdmin = admin;
+            this.Xp = exp;
         }
 
         public string Id { get; set; }
         public string Name { get; set; }
         public string Pass { get; set; }
         public int IsAdmin { get; set; }
+        public int Xp { get; set; }
     }
 }

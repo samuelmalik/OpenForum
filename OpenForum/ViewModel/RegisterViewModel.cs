@@ -69,7 +69,8 @@ namespace OpenForum.ViewModel
             PasswordsDontMatch = false;
 
             // create new User and add to database
-
+            User user = new User(Username, Password, 0,0);
+            await UserService.AddUser(user);
 
             // navigate back to log in
             await Shell.Current.GoToAsync("..");
