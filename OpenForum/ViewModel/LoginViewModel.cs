@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace OpenForum.ViewModel
 {
-    public partial class LoginViewModel : ObservableObject
+    public partial class LoginViewModel : BaseViewModel
     {
        
         public LoginViewModel() 
@@ -32,23 +32,38 @@ namespace OpenForum.ViewModel
 
 
         [RelayCommand]
-        void OnLogin()
+        async Task OnLogin()
         {
-   
-                    if (UserService.GetPassword(Username) == Password)
-                    {
-                        ShowErrorMessage = false;
-                        //User.currentUserID = i;
-                        // navigate to ForumPage
-                        Username = "";
-                        Password = "";
-                        Shell.Current.GoToAsync($"{nameof(ForumPage)}");
-                        return;
-                    }
-                
+            IsBusy = true;
+
+            try
+            {
+                IsBusy = true;
+                var userPassword = await UserService.GetPassword(Username);
+
+                if (userPassword == Password)
+                {
+                    ShowErrorMessage = false;
+                    //User.currentUserID = i;
+                    // navigate to ForumPage
+                    Username = "";
+                    Password = "";
+                    await Shell.Current.GoToAsync($"{nameof(ForumPage)}");
+                    return;
+                }
+
                 ShowErrorMessage = true;
+            }
+            finally
+            {
+                IsBusy = false;
+            }
 
             
+
+
+
+
 
 
 

@@ -76,12 +76,20 @@
                 BackgroundColor="#E94560" TextColor="#16213E" FontAttributes="Bold"
                 Margin="0,20,0,0"
                 Command="{Binding LoginCommand}"
+                IsVisible="{Binding IsNotBusy}"
                 />
+        
+        <!-- Activity indicator -->
+            <ActivityIndicator
+                IsVisible="{Binding IsBusy}"
+                IsRunning="{Binding IsBusy}"
+                Color="#E94560"/>
 
 
         <!-- Register button-->
             <Label Text="Register" TextColor="#E94560" FontSize="16"
-                   HorizontalOptions="Center">
+                   HorizontalOptions="Center"
+                   IsVisible="{Binding IsNotBusy}">
                 <Label.GestureRecognizers>
                     <TapGestureRecognizer Command="{Binding RegisterCommand}"/>
                 </Label.GestureRecognizers>

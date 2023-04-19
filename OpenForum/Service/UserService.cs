@@ -12,7 +12,7 @@ namespace OpenForum.Service
     public class UserService
     {
         public static string connectionString = "server=localhost;database=open_forum_db;username=root;password=password";
-        public static string GetPassword(string username)
+        public async static Task<string> GetPassword(string username)
         {
             string password = null;
 
@@ -20,7 +20,7 @@ namespace OpenForum.Service
 
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
-                connection.Open();
+                await connection.OpenAsync();
 
                 // query
                 string query = "SELECT usr_password FROM users WHERE username = @Username";
@@ -30,16 +30,14 @@ namespace OpenForum.Service
                 {
                     command.Parameters.AddWithValue("@Username", username);
 
-                    using (MySqlDataReader reader = command.ExecuteReader())
+                    using (MySqlDataReader reader = await command.ExecuteReaderAsync())
                     {
-                        if (reader.Read())
+                        if (await reader.ReadAsync())
                         {
                             password = reader["usr_password"].ToString();
                         }
                     }
                 }
-
-                connection.Close();
             }
 
 
