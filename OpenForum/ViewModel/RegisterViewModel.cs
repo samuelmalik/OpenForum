@@ -1,6 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using OpenForum.Model;
+using OpenForum.Service;
 using OpenForum.View;
 using System;
 using System.Collections.Generic;
@@ -32,7 +33,7 @@ namespace OpenForum.ViewModel
 
 
         [RelayCommand]
-        void Register()
+        async void Register()
         {
             PasswordsDontMatch = false;
             PasswordIsShort = false;
@@ -46,16 +47,7 @@ namespace OpenForum.ViewModel
             {
                 UsernameExist = false;
                 // check if username exist
-                foreach (var user in User.All)
-                {
-
-                    if (user.Name == Username)
-                    {
-                        UsernameExist = true;
-                        return;
-
-                    }
-                }
+                UsernameExist = await UserService.UsernameExist(Username);
             }
 
 
@@ -76,11 +68,11 @@ namespace OpenForum.ViewModel
             }
             PasswordsDontMatch = false;
 
-            // create new User and append to User.All
+            // create new User and add to database
 
 
             // navigate back to log in
-            Shell.Current.GoToAsync("..");
+            await Shell.Current.GoToAsync("..");
         }
     }
 }

@@ -17,9 +17,6 @@ namespace OpenForum.ViewModel
         {
         }
 
-        [ObservableProperty]
-        int test = User.currentUserID;
-
         [RelayCommand]
         void NavigateToMaterials()
         {

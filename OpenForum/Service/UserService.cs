@@ -68,5 +68,35 @@ namespace OpenForum.Service
             }
             return id;
         }
+
+        // return if username exist
+        public async static Task<bool> UsernameExist(string username)
+        {
+            string usernameInDB = null;
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+                await connection.OpenAsync();
+
+                // query
+                string query = "SELECT username FROM users WHERE username = @Username";
+
+                // command and parameters
+                using (MySqlCommand command = new MySqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Username", username);
+
+                    using (MySqlDataReader reader = await command.ExecuteReaderAsync())
+                    {
+                        if (await reader.ReadAsync())
+                        {
+                           usernameInDB = reader["username"].ToString();
+                        }
+                    }
+                }
+            }
+            return username == usernameInDB;
+        }
     }
+        
+
 }

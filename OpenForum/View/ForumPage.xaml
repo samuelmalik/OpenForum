@@ -44,8 +44,6 @@
                     </Image.GestureRecognizers>
                 </Image>
 
-                <Label Text="{Binding Test}" TextColor="Red"/>
-
                 <Image WidthRequest="30" HeightRequest="30" HorizontalOptions="Start">
                     <Image.Source>
                         <FontImageSource FontFamily="FAS" Glyph="&#xf14a;" Color="#E94560"/>
