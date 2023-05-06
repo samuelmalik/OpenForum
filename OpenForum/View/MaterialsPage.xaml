@@ -45,6 +45,9 @@
                     <Image.Source>
                         <FontImageSource FontFamily="FAS" Glyph="&#xf14a;" Color="#E94560"/>
                     </Image.Source>
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding NavigateToQuizCommand}"/>
+                    </Image.GestureRecognizers>
                 </Image>
 
                 <!--Users Page-->
