@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="OpenForum.View.MaterialsPage"
+             x:Class="OpenForum.View.UsersPage"
              xmlns:viewmodel="clr-namespace:OpenForum.ViewModel"
-             x:DataType="viewmodel:MaterialsViewModel"
+             x:DataType="viewmodel:UsersViewModel"
              BackgroundColor="#16213E">
 
     <Shell.BackButtonBehavior>
@@ -36,8 +36,11 @@
                 <!--Materials Page-->
                 <Image WidthRequest="30" HeightRequest="30" HorizontalOptions="Start">
                     <Image.Source>
-                        <FontImageSource FontFamily="FAS" Glyph="&#xf02d;" Color="#B9005B"/>
+                        <FontImageSource FontFamily="FAS" Glyph="&#xf02d;" Color="#E94560"/>
                     </Image.Source>
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding NavigateToMaterialsCommand}"/>
+                    </Image.GestureRecognizers>
                 </Image>
 
                 <!--Quiz Page-->
@@ -53,11 +56,8 @@
                 <!--Users Page-->
                 <Image WidthRequest="30" HeightRequest="30" HorizontalOptions="Start">
                     <Image.Source>
-                        <FontImageSource FontFamily="FAS" Glyph="&#xf0c0;" Color="#E94560"/>
+                        <FontImageSource FontFamily="FAS" Glyph="&#xf0c0;" Color="#B9005B"/>
                     </Image.Source>
-                    <Image.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding NavigateToUsersCommand}"/>
-                    </Image.GestureRecognizers>
                 </Image>
 
             </VerticalStackLayout>
@@ -74,7 +74,7 @@
             </Image>
         </HorizontalStackLayout>
 
-        <Label Grid.Row="1" Grid.Column="1" Text="Work in progress MATERIALS" TextColor="red"/>
+        <Label Grid.Row="1" Grid.Column="1" Text="Work in progress USERS" TextColor="red"/>
 
     </Grid>
 </ContentPage>

@@ -55,6 +55,9 @@
                     <Image.Source>
                         <FontImageSource FontFamily="FAS" Glyph="&#xf0c0;" Color="#E94560"/>
                     </Image.Source>
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding NavigateToUsersCommand}"/>
+                    </Image.GestureRecognizers>
                 </Image>
 
             </VerticalStackLayout>
@@ -71,7 +74,7 @@
             </Image>
         </HorizontalStackLayout>
 
-        <Label Grid.Row="1" Grid.Column="1" Text="Work in progress" TextColor="red"/>
+        <Label Grid.Row="1" Grid.Column="1" Text="Work in progress QUIZ" TextColor="red"/>
 
     </Grid>
 </ContentPage>

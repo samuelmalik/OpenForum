@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace OpenForum.ViewModel
 {
-    public partial class QuizViewModel : ObservableObject
+    public partial class UsersViewModel : BaseViewModel
     {
         [RelayCommand]
         void NavigateToForum()
@@ -16,15 +16,15 @@ namespace OpenForum.ViewModel
         }
 
         [RelayCommand]
-        void NavigateToMaterials()
+        void NavigateToQuiz()
         {
-            Shell.Current.GoToAsync($"../{nameof(MaterialsPage)}", false);
+            Shell.Current.GoToAsync($"../{nameof(QuizPage)}", false);
         }
 
         [RelayCommand]
-        void NavigateToUsers()
+        void NavigateToMaterials()
         {
-            Shell.Current.GoToAsync($"../{nameof(UsersPage)}", false);
+            Shell.Current.GoToAsync($"../{nameof(MaterialsPage)}", false);
         }
     }
 }

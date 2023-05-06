@@ -59,6 +59,9 @@
                     <Image.Source>
                         <FontImageSource FontFamily="FAS" Glyph="&#xf0c0;" Color="#E94560"/>
                     </Image.Source>
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding NavigateToUsersCommand}"/>
+                    </Image.GestureRecognizers>
                 </Image>
 
             </VerticalStackLayout>

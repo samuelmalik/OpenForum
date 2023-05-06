@@ -23,6 +23,12 @@ namespace OpenForum.ViewModel
             Shell.Current.GoToAsync($"../{nameof(QuizPage)}", false);
         }
 
+        [RelayCommand]
+        void NavigateToUsers()
+        {
+            Shell.Current.GoToAsync($"../{nameof(UsersPage)}", false);
+        }
+
 
     }
 }
