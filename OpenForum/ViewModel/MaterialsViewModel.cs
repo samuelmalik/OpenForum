@@ -29,6 +29,12 @@ namespace OpenForum.ViewModel
             Shell.Current.GoToAsync($"../{nameof(UsersPage)}", false);
         }
 
+        [RelayCommand]
+        void NavigateToUserInfo()
+        {
+            Shell.Current.GoToAsync($"../{nameof(UserInfoPage)}", false);
+        }
+
 
     }
 }

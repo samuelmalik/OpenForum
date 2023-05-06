@@ -54,6 +54,11 @@ public static class MauiProgram
         builder.Services.AddTransient<UsersPage>();
         builder.Services.AddTransient<UsersViewModel>();
 
+        builder.Services.AddSingleton<UserInfoPage>();
+        builder.Services.AddSingleton<UserInfoViewModel>();
+        builder.Services.AddTransient<UserInfoPage>();
+        builder.Services.AddTransient<UserInfoViewModel>();
+
 
         return builder.Build();
 	}

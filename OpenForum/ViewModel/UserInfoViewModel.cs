@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace OpenForum.ViewModel
 {
-    public partial class UsersViewModel : BaseViewModel
+    public partial class UserInfoViewModel : BaseViewModel
     {
         [RelayCommand]
         void NavigateToForum()
@@ -28,9 +28,9 @@ namespace OpenForum.ViewModel
         }
 
         [RelayCommand]
-        void NavigateToUserInfo()
+        void NavigateToUsers()
         {
-            Shell.Current.GoToAsync($"../{nameof(UserInfoPage)}", false);
+            Shell.Current.GoToAsync($"../{nameof(UsersPage)}", false);
         }
     }
 }
