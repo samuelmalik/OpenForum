@@ -13,11 +13,12 @@ public partial class LoginPage : ContentPage
 	}
 
 	// test OnAppearing overloadu
-
-    /*protected override void OnAppearing()
+	/*
+    protected override void OnAppearing()
     {
 		LoginViewModel viewModel = BindingContext as LoginViewModel;
 		viewModel.ShowErrorMessage = true;
+        viewModel.RegisterCommand.Execute(viewModel);
         base.OnAppearing();
     }*/
 
