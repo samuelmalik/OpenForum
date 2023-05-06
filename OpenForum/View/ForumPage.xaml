@@ -27,7 +27,7 @@
 
 
 
-                <!--Forum page-->
+                <!--Forum Page-->
                 <Image WidthRequest="30" HeightRequest="30" HorizontalOptions="Start">
                     <Image.Source>
                         <FontImageSource FontFamily="FAS" Glyph="&#x3f;" Color="#B9005B"/>
@@ -43,13 +43,18 @@
                         <TapGestureRecognizer Command="{Binding NavigateToMaterialsCommand}"/>
                     </Image.GestureRecognizers>
                 </Image>
-
+                
+                <!--Quiz Page-->
                 <Image WidthRequest="30" HeightRequest="30" HorizontalOptions="Start">
                     <Image.Source>
                         <FontImageSource FontFamily="FAS" Glyph="&#xf14a;" Color="#E94560"/>
                     </Image.Source>
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding NavigateToQuizCommand}"/>
+                    </Image.GestureRecognizers>
                 </Image>
 
+                <!--Users Page-->
                 <Image WidthRequest="30" HeightRequest="30" HorizontalOptions="Start">
                     <Image.Source>
                         <FontImageSource FontFamily="FAS" Glyph="&#xf0c0;" Color="#E94560"/>
@@ -68,7 +73,9 @@
                 </Image.Source>
             </Image>
         </HorizontalStackLayout>
-        <CollectionView Grid.Column="1" Grid.Row="1"  Grid.RowSpan="2" Margin="30">
+
+        <!-- Posts -->
+        <CollectionView Grid.Column="1" Grid.Row="1"  Grid.RowSpan="2" Margin="30" IsVisible="false">
             <CollectionView.ItemsSource>
                 <x:Array Type="{x:Type model:Post}">
                     <model:Post Author="Jozko" Title="Nejde mi internet" Message="pomoc pls"/>

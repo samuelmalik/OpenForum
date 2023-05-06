@@ -7,15 +7,18 @@ using System.Threading.Tasks;
 
 namespace OpenForum.ViewModel
 {
-    public partial class MaterialsViewModel : BaseViewModel
+    public partial class QuizViewModel : ObservableObject
     {
-
         [RelayCommand]
         void NavigateToForum()
         {
             Shell.Current.GoToAsync("..", false);
         }
 
-
+        [RelayCommand]
+        void NavigateToMaterials()
+        {
+            Shell.Current.GoToAsync($"../{nameof(MaterialsPage)}", false);
+        }
     }
 }

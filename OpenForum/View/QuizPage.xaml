@@ -1,12 +1,77 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="OpenForum.View.Quiz"
-             Title="Quiz">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             xmlns:viewmodel="clr-namespace:OpenForum.ViewModel"
+             x:DataType="viewmodel:QuizViewModel"
+             x:Class="OpenForum.View.QuizPage"
+             BackgroundColor="#16213E">
+    
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior IsVisible="False"/>
+    </Shell.BackButtonBehavior>
+
+    <Grid ColumnDefinitions="auto,*,auto"
+          RowDefinitions="auto,*,auto">
+
+
+        <Grid
+            BackgroundColor="#0F3460"  Grid.Column="1" Grid.Row="0" Margin="0" VerticalOptions="Center" HeightRequest="50">
+            <Image Source="of_logo_v1_1.png"
+                   WidthRequest="65" Margin="5"/>
+
+        </Grid>
+
+        <HorizontalStackLayout BackgroundColor="#533483" Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" >
+            <VerticalStackLayout Padding="20" Spacing="25">
+                <!--Forum page-->
+                <Image WidthRequest="30" HeightRequest="30" HorizontalOptions="Start">
+                    <Image.Source>
+                        <FontImageSource FontFamily="FAS" Glyph="&#x3f;" Color="#E94560"/>
+                    </Image.Source>
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding NavigateToForumCommand}"/>
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <!--Materials Page-->
+                <Image WidthRequest="30" HeightRequest="30" HorizontalOptions="Start">
+                    <Image.Source>
+                        <FontImageSource FontFamily="FAS" Glyph="&#xf02d;" Color="#E94560"/>
+                    </Image.Source>
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding NavigateToMaterialsCommand}"/>
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <!--Quiz Page-->
+                <Image WidthRequest="30" HeightRequest="30" HorizontalOptions="Start">
+                    <Image.Source>
+                        <FontImageSource FontFamily="FAS" Glyph="&#xf14a;" Color="#B9005B"/>
+                    </Image.Source>
+                </Image>
+
+                <!--Users Page-->
+                <Image WidthRequest="30" HeightRequest="30" HorizontalOptions="Start">
+                    <Image.Source>
+                        <FontImageSource FontFamily="FAS" Glyph="&#xf0c0;" Color="#E94560"/>
+                    </Image.Source>
+                </Image>
+
+            </VerticalStackLayout>
+
+        </HorizontalStackLayout>
+
+
+        <!--User info-->
+        <HorizontalStackLayout Grid.Column="0" Grid.Row="2" BackgroundColor="#533483" Padding="20">
+            <Image WidthRequest="30" HeightRequest="30" HorizontalOptions="Start">
+                <Image.Source>
+                    <FontImageSource FontFamily="FAS" Glyph="&#xf007;" Color="#E94560"/>
+                </Image.Source>
+            </Image>
+        </HorizontalStackLayout>
+
+        <Label Grid.Row="1" Grid.Column="1" Text="Work in progress" TextColor="red"/>
+
+    </Grid>
 </ContentPage>

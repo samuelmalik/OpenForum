@@ -1,9 +1,10 @@
 namespace OpenForum.View;
 
-public partial class Quiz : ContentPage
+public partial class QuizPage : ContentPage
 {
-	public Quiz()
+	public QuizPage(QuizViewModel viewModel)
 	{
 		InitializeComponent();
+		BindingContext = viewModel;
 	}
 }

@@ -23,9 +23,6 @@
 
         <HorizontalStackLayout BackgroundColor="#533483" Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" >
             <VerticalStackLayout Padding="20" Spacing="25">
-
-
-
                 <!--Forum page-->
                 <Image WidthRequest="30" HeightRequest="30" HorizontalOptions="Start">
                     <Image.Source>
@@ -58,6 +55,7 @@
                 </Image>
 
             </VerticalStackLayout>
+
         </HorizontalStackLayout>
 
 
@@ -69,8 +67,8 @@
                 </Image.Source>
             </Image>
         </HorizontalStackLayout>
-        
 
+        <Label Grid.Row="1" Grid.Column="1" Text="Work in progress" TextColor="red"/>
 
     </Grid>
 </ContentPage>
