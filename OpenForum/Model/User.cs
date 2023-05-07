@@ -29,5 +29,7 @@ namespace OpenForum.Model
         public int IsAdmin { get; set; }
         public string Note { get; set; }
         public int Xp { get; set; }
+        public string Status { get; set; }
+
     }
 }

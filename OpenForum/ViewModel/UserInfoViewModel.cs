@@ -9,6 +9,27 @@ namespace OpenForum.ViewModel
 {
     public partial class UserInfoViewModel : BaseViewModel
     {
+        public UserInfoViewModel() 
+        {
+            id = User.currentUser.Id;
+            username = User.currentUser.Name;
+            xp = User.currentUser.Xp;
+            status = User.currentUser.Status;
+        }
+
+        [ObservableProperty]
+        string id;
+
+        [ObservableProperty]
+        string username;
+
+        [ObservableProperty]
+        int xp;
+
+        [ObservableProperty]
+        string status;
+
+
         [RelayCommand]
         void NavigateToForum()
         {

@@ -140,7 +140,8 @@ namespace OpenForum.Service
                                 Pass = reader["usr_password"].ToString(),
                                 IsAdmin = Convert.ToInt32(reader["is_admin"]),
                                 Note = reader["note"].ToString(),
-                                Xp = Convert.ToInt32(reader["xp"])
+                                Xp = Convert.ToInt32(reader["xp"]),
+                                Status = reader["status"].ToString()
                             };
                         }
                     }
