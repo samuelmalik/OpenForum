@@ -113,6 +113,41 @@ namespace OpenForum.Service
             await connection.OpenAsync();
             await command.ExecuteNonQueryAsync();
         }
+
+        // get user by username
+        public async static Task<User> GetUserByUsername(string username)
+        {
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+                await connection.OpenAsync();
+
+                // query
+                string query = "SELECT * FROM users WHERE username = @Username";
+
+                // command and parameters
+                using (MySqlCommand command = new MySqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Username", username);
+
+                    using (MySqlDataReader reader = await command.ExecuteReaderAsync())
+                    {
+                        if (await reader.ReadAsync())
+                        {
+                            return new User
+                            {
+                                Id = reader["user_id"].ToString(),
+                                Name = username,
+                                Pass = reader["usr_password"].ToString(),
+                                IsAdmin = Convert.ToInt32(reader["is_admin"]),
+                                Note = reader["note"].ToString(),
+                                Xp = Convert.ToInt32(reader["xp"])
+                            };
+                        }
+                    }
+                }
+            }
+            return null;
+        }
     }
         
 

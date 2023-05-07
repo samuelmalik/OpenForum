@@ -45,6 +45,7 @@ namespace OpenForum.ViewModel
                 {
                     ShowErrorMessage = false;
                     User.currentUserID = await UserService.GetId(Username);
+                    User.currentUser = await UserService.GetUserByUsername(Username);
                    
                     // navigate to ForumPage
                     Username = "";
