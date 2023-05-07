@@ -81,7 +81,7 @@
         <!-- Main part of page -->
         <Grid Grid.Row="1" Grid.Column="1" 
               ColumnDefinitions="*,auto,*"
-              RowDefinitions="auto,auto,auto">
+              RowDefinitions="auto,auto,*">
             
             <!-- currently logged -->
             <HorizontalStackLayout Grid.Row="0" Grid.Column="1" Spacing="10">
@@ -89,12 +89,23 @@
                 <Label Text="{Binding Username}" TextColor="#E94560" FontSize="20" VerticalOptions="End"/>
             </HorizontalStackLayout>
 
+            <!-- id -->
             <HorizontalStackLayout Grid.Row="0" Grid.Column="2" HorizontalOptions="End" >
                 <Label Text="your ID is: #" TextColor="#E94560"/>
                 <Label Text="{Binding Id}" TextColor="#E94560" FontAttributes="Bold"/>
             </HorizontalStackLayout>
+            
+            <!-- xp -->
+            <Label Grid.Row="0" Grid.Column="0" Text="{Binding Xp, StringFormat='Experience: {0} xp'}" TextColor="#E94560"/>
 
-            <Label Grid.Row="2" Grid.Column="1" Text="{Binding Status}" TextColor="#B9005B"/>
+            <!-- Logout and status container -->
+            <HorizontalStackLayout Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" HorizontalOptions="Center" VerticalOptions="Start" Margin="0,0,0,0">
+                <Button Text="Log out" HeightRequest="40"/>
+                <Frame BorderColor="#E94560" BackgroundColor="Transparent" Padding="0">
+                    <Editor WidthRequest="200" HeightRequest="80" BackgroundColor="red"/>
+                </Frame>
+            </HorizontalStackLayout>
+
         </Grid>
 
         
