@@ -100,21 +100,27 @@
             <Label Grid.Row="0" Grid.Column="0" Text="{Binding Xp, StringFormat='Experience: {0} xp'}" TextColor="#E94560"/>
 
             <!-- Status -->
-               <VerticalStackLayout Grid.Column="0" Grid.Row="2" HorizontalOptions="Start" Grid.ColumnSpan="2" Margin="15,0,0,15">
-                <Label Text="Status:" HorizontalOptions="Center" TextColor="#E94560"/>
-                <Frame BackgroundColor="Transparent" Padding="0" BorderColor="red" WidthRequest="200" HeightRequest="250">
-                   <Editor WidthRequest="200" HeightRequest="250" BackgroundColor="Transparent" MaxLength="100"/>
-                </Frame>
-            </VerticalStackLayout>
-            
+               <HorizontalStackLayout Grid.Column="0" Grid.Row="2" HorizontalOptions="Start" Grid.ColumnSpan="2" Margin="15,0,0,15">
+                <VerticalStackLayout>
+                   <Label Text="Status:" HorizontalOptions="Center" TextColor="#E94560"/>
+                    <Frame BackgroundColor="Transparent" Padding="0" BorderColor="#E94560" WidthRequest="200" HeightRequest="250">
+                    <Editor WidthRequest="200" HeightRequest="250" BackgroundColor="Transparent" MaxLength="100"
+                                Placeholder="Write your status here..." PlaceholderColor="#E94560" TextColor="#E94560"
+                                Text="{Binding Status}"/>
+                    </Frame>
+                </VerticalStackLayout>
+                
             <!-- Status save button -->
-            <Button Text="Save" HeightRequest="40" WidthRequest="60" Grid.Row="2" Grid.Column="0" HorizontalOptions="End" VerticalOptions="End" Margin="0,0,0,25"
+                <Button Text="Save" HeightRequest="40" WidthRequest="60" Grid.Row="2" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="End" Margin="10,0,0,10"
                         BackgroundColor="#E94560" TextColor="#16213E" FontAttributes="Bold"/>
-
+            </HorizontalStackLayout>
+            
+            
             <!-- Log out -->
             <Button Text="Log out" Grid.Column="2" Grid.Row="2" Grid.RowSpan="2" HorizontalOptions="End" VerticalOptions="End"
                     WidthRequest="80" HeightRequest="30"
-                    BackgroundColor="#E94560" TextColor="#16213E" FontAttributes="Bold" Margin="0,0,15,25"/>
+                    BackgroundColor="#E94560" TextColor="#16213E" FontAttributes="Bold" Margin="0,0,15,25"
+                    Command="{Binding NavigateToLoginCommand}"/>
         </Grid>
 
         

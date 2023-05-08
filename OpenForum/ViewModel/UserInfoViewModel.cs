@@ -53,5 +53,11 @@ namespace OpenForum.ViewModel
         {
             Shell.Current.GoToAsync($"../{nameof(UsersPage)}", false);
         }
+
+        [RelayCommand]
+        void NavigateToLogin()
+        {
+            Shell.Current.GoToAsync($"../..");
+        }
     }
 }
