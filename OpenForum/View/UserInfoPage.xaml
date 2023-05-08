@@ -100,13 +100,21 @@
             <Label Grid.Row="0" Grid.Column="0" Text="{Binding Xp, StringFormat='Experience: {0} xp'}" TextColor="#E94560"/>
 
             <!-- Status -->
-            <VerticalStackLayout Grid.Column="0" Grid.Row="2" HorizontalOptions="Start" Grid.ColumnSpan="2">
-                <Label Text="Status:" HorizontalOptions="Center"/>
-                <Editor WidthRequest="200" HeightRequest="250" BackgroundColor="Transparent" MaxLength="100"/>
+               <VerticalStackLayout Grid.Column="0" Grid.Row="2" HorizontalOptions="Start" Grid.ColumnSpan="2" Margin="15,0,0,15">
+                <Label Text="Status:" HorizontalOptions="Center" TextColor="#E94560"/>
+                <Frame BackgroundColor="Transparent" Padding="0" BorderColor="red" WidthRequest="200" HeightRequest="250">
+                   <Editor WidthRequest="200" HeightRequest="250" BackgroundColor="Transparent" MaxLength="100"/>
+                </Frame>
             </VerticalStackLayout>
             
+            <!-- Status save button -->
+            <Button Text="Save" HeightRequest="40" WidthRequest="60" Grid.Row="2" Grid.Column="0" HorizontalOptions="End" VerticalOptions="End" Margin="0,0,0,25"
+                        BackgroundColor="#E94560" TextColor="#16213E" FontAttributes="Bold"/>
+
             <!-- Log out -->
-            <Button Text="Log out" HeightRequest="40" WidthRequest="80" Grid.Column="2" Grid.Row="2" Grid.RowSpan="2" HorizontalOptions="End" VerticalOptions="End"/>
+            <Button Text="Log out" Grid.Column="2" Grid.Row="2" Grid.RowSpan="2" HorizontalOptions="End" VerticalOptions="End"
+                    WidthRequest="80" HeightRequest="30"
+                    BackgroundColor="#E94560" TextColor="#16213E" FontAttributes="Bold" Margin="0,0,15,25"/>
         </Grid>
 
         
