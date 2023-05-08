@@ -9,6 +9,14 @@ namespace OpenForum.ViewModel
 {
     public partial class UsersViewModel : BaseViewModel
     {
+        public UsersViewModel()
+        {
+            Test = User.All.Count;
+        }
+
+        [ObservableProperty]
+        int test;
+
         [RelayCommand]
         void NavigateToForum()
         {

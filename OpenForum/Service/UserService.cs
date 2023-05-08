@@ -150,6 +150,43 @@ namespace OpenForum.Service
             return null;
         }
 
+        // get all users
+        public async static Task<User> GetAllUsers()
+        {
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+                
+                await connection.OpenAsync();
+
+                // query
+                string query = "SELECT * FROM users";
+
+                // command and parameters
+                using (MySqlCommand command = new MySqlCommand(query, connection))
+                {
+
+                    using (MySqlDataReader reader = await command.ExecuteReaderAsync())
+                    {
+                        while (await reader.ReadAsync())
+                        {
+                            User user = new User
+                            {
+                                Id = reader["user_id"].ToString(),
+                                Name = reader["username"].ToString(),
+                                Pass = reader["usr_password"].ToString(),
+                                IsAdmin = Convert.ToInt32(reader["is_admin"]),
+                                Note = reader["note"].ToString(),
+                                Xp = Convert.ToInt32(reader["xp"]),
+                                Status = reader["status"].ToString()
+                            };
+                            User.All.Add(user);
+                        }
+                    }
+                }
+            }
+            return null;
+        }
+
         // update user's status
         public async static Task UpdateStatus(string id, string status)
         {

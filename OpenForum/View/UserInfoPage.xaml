@@ -117,6 +117,7 @@
                         IsVisible="{Binding IsNotBusy}"/>
             <!-- Activity indicator -->
                 <ActivityIndicator
+                HeightRequest="40" WidthRequest="60" HorizontalOptions="Start" VerticalOptions="End" Margin="10,0,0,10"
                 IsVisible="{Binding IsBusy}"
                 IsRunning="{Binding IsBusy}"
                 Color="#E94560"/>

@@ -77,7 +77,7 @@
             </Image>
         </HorizontalStackLayout>
 
-        <Label Grid.Row="1" Grid.Column="1" Text="Work in progress USERS" TextColor="red"/>
+        <Label Grid.Row="1" Grid.Column="1" Text="{Binding Test}" TextColor="red"/>
 
     </Grid>
 </ContentPage>
