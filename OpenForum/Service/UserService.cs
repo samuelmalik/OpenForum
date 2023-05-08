@@ -149,6 +149,19 @@ namespace OpenForum.Service
             }
             return null;
         }
+
+        // update user's status
+        public async static Task UpdateStatus(string id, string status)
+        {
+            using MySqlConnection connection = new MySqlConnection(connectionString);
+            string sql = "UPDATE users SET status = @status  WHERE user_id = @id";
+            using MySqlCommand command = new MySqlCommand(sql, connection);
+            command.Parameters.AddWithValue("@status", status);
+            command.Parameters.AddWithValue("@id", id);
+
+            await connection.OpenAsync();
+            await command.ExecuteNonQueryAsync();
+        }
     }
         
 

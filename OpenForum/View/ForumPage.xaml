@@ -7,7 +7,7 @@
              x:DataType="viewmodel:ForumViewModel"
              BackgroundColor="#16213E">
     <Shell.BackButtonBehavior>
-        <BackButtonBehavior IsVisible="True"/>
+        <BackButtonBehavior IsVisible="False"/>
     </Shell.BackButtonBehavior>
 
     <Grid ColumnDefinitions="auto,*,auto"

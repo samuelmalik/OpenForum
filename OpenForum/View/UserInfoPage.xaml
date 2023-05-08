@@ -111,8 +111,15 @@
                 </VerticalStackLayout>
                 
             <!-- Status save button -->
-                <Button Text="Save" HeightRequest="40" WidthRequest="60" Grid.Row="2" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="End" Margin="10,0,0,10"
-                        BackgroundColor="#E94560" TextColor="#16213E" FontAttributes="Bold"/>
+                <Button Text="Save" HeightRequest="40" WidthRequest="60" HorizontalOptions="Start" VerticalOptions="End" Margin="10,0,0,10"
+                        BackgroundColor="#E94560" TextColor="#16213E" FontAttributes="Bold"
+                        Command="{Binding SaveCommand}"
+                        IsVisible="{Binding IsNotBusy}"/>
+            <!-- Activity indicator -->
+                <ActivityIndicator
+                IsVisible="{Binding IsBusy}"
+                IsRunning="{Binding IsBusy}"
+                Color="#E94560"/>
             </HorizontalStackLayout>
             
             

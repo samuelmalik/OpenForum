@@ -1,4 +1,5 @@
 ﻿using CommunityToolkit.Mvvm.Input;
+using OpenForum.Service;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -58,6 +59,15 @@ namespace OpenForum.ViewModel
         void NavigateToLogin()
         {
             Shell.Current.GoToAsync($"../..");
+        }
+
+        [RelayCommand]
+        async Task OnSave()
+        {
+            IsBusy = true;
+            await UserService.UpdateStatus(Id, Status);
+            User.currentUser.Status = Status;
+            IsBusy = false;
         }
     }
 }
