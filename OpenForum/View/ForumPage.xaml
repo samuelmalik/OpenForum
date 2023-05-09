@@ -81,7 +81,7 @@
         </HorizontalStackLayout>
 
         <!-- Posts -->
-        <CollectionView Grid.Column="1" Grid.Row="1"  Grid.RowSpan="2" Margin="30" IsVisible="false">
+        <CollectionView Grid.Column="1" Grid.Row="1"  Grid.RowSpan="2" Margin="30" IsVisible="true">
             <CollectionView.ItemsSource>
                 <x:Array Type="{x:Type model:Post}">
                     <model:Post Author="Jozko" Title="Nejde mi internet" Message="pomoc pls"/>

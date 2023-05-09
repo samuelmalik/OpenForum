@@ -4,7 +4,8 @@
              x:Class="OpenForum.View.UsersPage"
              xmlns:viewmodel="clr-namespace:OpenForum.ViewModel"
              x:DataType="viewmodel:UsersViewModel"
-             BackgroundColor="#16213E">
+             BackgroundColor="#16213E"
+             xmlns:model="clr-namespace:OpenForum.Model">
 
     <Shell.BackButtonBehavior>
         <BackButtonBehavior IsVisible="False"/>
@@ -77,7 +78,45 @@
             </Image>
         </HorizontalStackLayout>
 
-        <Label Grid.Row="1" Grid.Column="1" Text="{Binding Test}" TextColor="red"/>
+        <CollectionView Grid.Column="1" Grid.Row="1"  Grid.RowSpan="2" Margin="30" IsVisible="true"
+                        ItemsSource="{Binding Users}">
+
+
+            <CollectionView.ItemTemplate  >
+                <DataTemplate x:DataType="model:User">
+                    <Grid ColumnDefinitions="*"
+                          RowDefinitions="auto"
+                          Padding="0,0,0,20"
+                          Background="Transparent">
+                        <Frame Grid.Column="0" Grid.Row="0" BorderColor="#E94560" Padding="0">
+                            <HorizontalStackLayout BackgroundColor="#0F3460">
+                                <VerticalStackLayout Padding="30" BackgroundColor="#0F3460" MaximumHeightRequest="400">
+                                    <HorizontalStackLayout>
+                                        <Label FontFamily="Arial" Margin="5" FontSize="20" FontAttributes="Italic" Text="{Binding Id, StringFormat='#{0}'}" VerticalOptions="Start"/>
+                                        <Image WidthRequest="20" HeightRequest="20" HorizontalOptions="Start" IsVisible="{Binding IsAdmin}">
+                                            <Image.Source>
+                                                <FontImageSource FontFamily="FAS" Glyph="&#xf521;" Color="#FFD95A"/>
+                                            </Image.Source>
+                                        </Image>
+                                    </HorizontalStackLayout>
+                                    <Label FontFamily="Arial" Margin="5" FontSize="50" FontAttributes="Bold" Text="{Binding Name}" VerticalOptions="Center"/>
+                                    <Label FontFamily="Arial"  Margin="5" FontSize="30" Text="{Binding Xp, StringFormat='Experience points: {0}'}" VerticalOptions="End"/>
+                                </VerticalStackLayout>
+                                <VerticalStackLayout>
+                                    <Label FontFamily="Arial"  Margin="5" FontSize="30" Text="Status:" TextColor="#E94560" VerticalOptions="Start"/>
+                                    <Label FontFamily="Arial"  Margin="5" FontSize="30" Text="{Binding Status}" VerticalOptions="Center" MaximumWidthRequest="400"/>
+                                    <Label FontFamily="Arial"  Margin="5" FontSize="30" Text="Admin note:" TextColor="#E94560" VerticalOptions="Start" IsVisible="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:UsersViewModel}}, Path=IsCurrentUserAdmin}"/>
+                                    <Label FontFamily="Arial"  Margin="5" FontSize="30" Text="{Binding Note}" VerticalOptions="Center" MaximumWidthRequest="400" IsVisible="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:UsersViewModel}}, Path=IsCurrentUserAdmin}"/>
+                                </VerticalStackLayout>
+                                
+                               
+
+                            </HorizontalStackLayout>
+                        </Frame>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
 
     </Grid>
 </ContentPage>

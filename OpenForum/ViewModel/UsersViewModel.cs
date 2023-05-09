@@ -1,9 +1,11 @@
 ﻿using CommunityToolkit.Mvvm.Input;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 
 namespace OpenForum.ViewModel
 {
@@ -11,11 +13,22 @@ namespace OpenForum.ViewModel
     {
         public UsersViewModel()
         {
-            Test = User.All.Count;
+            foreach (var user in User.All)
+            {
+                Users.Add(user);
+            }
+            
+            if (User.currentUser.IsAdmin == 1) 
+            {
+                isCurrentUserAdmin = true;
+            } else { isCurrentUserAdmin = false; }
         }
 
+        public ObservableCollection<User> Users { get; set; } = new();
+
+
         [ObservableProperty]
-        int test;
+        bool isCurrentUserAdmin;
 
         [RelayCommand]
         void NavigateToForum()
