@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
+
 namespace OpenForum.ViewModel
 {
     public partial class UsersViewModel : BaseViewModel
@@ -21,6 +22,18 @@ namespace OpenForum.ViewModel
 
         [ObservableProperty]
         bool isCurrentUserAdmin;
+
+        [RelayCommand]
+        async Task GoToDetailsAsync(User user)
+        {
+            if (user == null || IsCurrentUserAdmin == false) return;
+
+            await Shell.Current.GoToAsync($"{nameof(UserDetailsPage)}", true,
+                new Dictionary<string, object>
+                {
+                {"User", user}
+                });
+        }
 
         [RelayCommand]
         void NavigateToForum()

@@ -14,6 +14,7 @@ public partial class UsersPage : ContentPage
     protected override void OnAppearing()
     {
         UsersViewModel viewModel = BindingContext as UsersViewModel;
+        viewModel.Users.Clear();
         foreach (var user in User.All)
         {
             viewModel.Users.Add(user);

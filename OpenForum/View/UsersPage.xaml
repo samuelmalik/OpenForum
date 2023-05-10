@@ -89,6 +89,11 @@
                           Padding="0,0,0,20"
                           Background="Transparent">
                         <Frame Grid.Column="0" Grid.Row="0" BorderColor="#E94560" Padding="0">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer CommandParameter="{Binding .}"
+                                                      Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:UsersViewModel}}, Path=GoToDetailsCommand}"
+                                                      />
+                            </Frame.GestureRecognizers>
                             <HorizontalStackLayout BackgroundColor="#0F3460">
                                 <VerticalStackLayout Padding="30" BackgroundColor="#0F3460" MaximumHeightRequest="400">
                                     <HorizontalStackLayout>
