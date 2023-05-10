@@ -13,15 +13,7 @@ namespace OpenForum.ViewModel
     {
         public UsersViewModel()
         {
-            foreach (var user in User.All)
-            {
-                Users.Add(user);
-            }
             
-            if (User.currentUser.IsAdmin == 1) 
-            {
-                isCurrentUserAdmin = true;
-            } else { isCurrentUserAdmin = false; }
         }
 
         public ObservableCollection<User> Users { get; set; } = new();

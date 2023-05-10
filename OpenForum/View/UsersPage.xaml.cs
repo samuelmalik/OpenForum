@@ -1,4 +1,7 @@
 namespace OpenForum.View;
+using OpenForum.View;
+using OpenForum.ViewModel;
+using OpenForum.Model;
 
 public partial class UsersPage : ContentPage
 {
@@ -7,4 +10,20 @@ public partial class UsersPage : ContentPage
 		InitializeComponent();
 		BindingContext = viewmodel;
 	}
+
+    protected override void OnAppearing()
+    {
+        UsersViewModel viewModel = BindingContext as UsersViewModel;
+        foreach (var user in User.All)
+        {
+            viewModel.Users.Add(user);
+        }
+
+        if (User.currentUser.IsAdmin == 1)
+        {
+            viewModel.IsCurrentUserAdmin = true;
+        }
+        else { viewModel.IsCurrentUserAdmin = false; }
+        base.OnAppearing();
+    }
 }

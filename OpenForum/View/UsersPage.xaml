@@ -107,6 +107,7 @@
                                     <Label FontFamily="Arial"  Margin="5" FontSize="30" Text="{Binding Status}" VerticalOptions="Center" MaximumWidthRequest="400"/>
                                     <Label FontFamily="Arial"  Margin="5" FontSize="30" Text="Admin note:" TextColor="#E94560" VerticalOptions="Start" IsVisible="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:UsersViewModel}}, Path=IsCurrentUserAdmin}"/>
                                     <Label FontFamily="Arial"  Margin="5" FontSize="30" Text="{Binding Note}" VerticalOptions="Center" MaximumWidthRequest="400" IsVisible="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:UsersViewModel}}, Path=IsCurrentUserAdmin}"/>
+                                    
                                 </VerticalStackLayout>
                                 
                                
