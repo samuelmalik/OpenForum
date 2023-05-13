@@ -58,5 +58,10 @@ namespace OpenForum.ViewModel
         {
             Shell.Current.GoToAsync($"../{nameof(UserInfoPage)}", false);
         }
+
+
+
+
+
     }
 }
