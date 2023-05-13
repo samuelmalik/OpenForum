@@ -30,6 +30,7 @@ namespace OpenForum.Model
         public string Note { get; set; }
         public int Xp { get; set; }
         public string Status { get; set; }
+        public bool Discord { get; set; }
 
     }
 }

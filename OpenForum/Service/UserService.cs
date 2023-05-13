@@ -177,7 +177,9 @@ namespace OpenForum.Service
                                 IsAdmin = Convert.ToInt32(reader["is_admin"]),
                                 Note = reader["note"].ToString(),
                                 Xp = Convert.ToInt32(reader["xp"]),
-                                Status = reader["status"].ToString()
+                                Status = reader["status"].ToString(),
+                                Discord = reader["username"].ToString().Contains("a")
+
                             };
                             User.All.Add(user);
                         }

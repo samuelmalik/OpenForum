@@ -79,7 +79,7 @@
         </HorizontalStackLayout>
 
         <CollectionView Grid.Column="1" Grid.Row="1"  Grid.RowSpan="2" Margin="30" IsVisible="true"
-                        ItemsSource="{Binding Users}" FlexLayout.Basis="Auto">
+                        ItemsSource="{Binding Users}">
 
 
             <CollectionView.ItemTemplate  >
@@ -99,8 +99,8 @@
                                     <VerticalStackLayout Padding="30" BackgroundColor="#0F3460" MaximumHeightRequest="400">
                                         <!-- Id -->
                                         <HorizontalStackLayout>
-                                            <Label FontFamily="Arial" Margin="5" FontSize="20" FontAttributes="Italic" Text="{Binding Id, StringFormat='#{0}'}" VerticalOptions="Start"/>
-                                            <Image WidthRequest="20" HeightRequest="20" HorizontalOptions="Start" IsVisible="{Binding IsAdmin}">
+                                            <Label FontFamily="Arial" Margin="5" FontSize="20" FontAttributes="Italic" Text="{Binding Id, StringFormat='#{0}'}" VerticalOptions="Start" IsVisible="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:UsersViewModel}}, Path=IsCurrentUserAdmin}"/>
+                                            <Image WidthRequest="30" HeightRequest="30" HorizontalOptions="Start" IsVisible="{Binding IsAdmin}">
                                                 <Image.Source>
                                                     <FontImageSource FontFamily="FAS" Glyph="&#xf521;" Color="#FFD95A"/>
                                                 </Image.Source>
@@ -119,8 +119,38 @@
 
                                 </HorizontalStackLayout>
                                 <!-- achievements -->
-                                
-                               
+                                <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Default"  BackgroundColor="#0F3460">
+                                    <HorizontalStackLayout Margin="10,0,10,20" Spacing="5">
+                                        <Image Source="slack.png" HeightRequest="50"/>
+                                        <Image Source="discord.png" HeightRequest="50" IsVisible="{Binding Discord}"/>
+                                        <Image Source="aktivita.png" HeightRequest="50"/>
+                                        <Image Source="rychlost.png" HeightRequest="50"/>
+                                        <Image Source="pomocnik.png" HeightRequest="50"/>
+                                        <Image Source="nacas.png" HeightRequest="50"/>
+                                        <Image Source="dobry_napad.png" HeightRequest="50"/>
+                                        <Image Source="christmass_coder.png" HeightRequest="50"/>
+                                        <Image Source="presenter.png" HeightRequest="50"/>
+                                        <Image Source="quizz_master.png" HeightRequest="50"/>
+                                        <Image Source="github.png" HeightRequest="50"/>
+                                        <Image Source="cvicenia_10.png" HeightRequest="50"/>
+                                        <Image Source="cvicenia_20.png" HeightRequest="50"/>
+                                        <Image Source="cvicenia_30.png" HeightRequest="50"/>
+                                        <Image Source="cvicenia_40.png" HeightRequest="50"/>
+                                        <Image Source="cvicenia_50.png" HeightRequest="50"/>
+                                        <Image Source="gilded_rose.png" HeightRequest="50"/>
+                                        <Image Source="oop_basics.png" HeightRequest="50"/>
+                                        <Image Source="housing_estate.png" HeightRequest="50"/>
+                                        <Image Source="coding_game.png" HeightRequest="50"/>
+                                        <Image Source="cg_horse_racing.png" HeightRequest="50"/>
+                                        <Image Source="cg_temperatures.png" HeightRequest="50"/>
+                                        <Image Source="cg_circuit_resistance.png" HeightRequest="50"/>
+                                        <Image Source="hello_xamarin.png" HeightRequest="50"/>
+                                        <Image Source="beats_per_minute.png" HeightRequest="50" BackgroundColor="#CCC"/>
+                                        <Image Source="mvvm.png" HeightRequest="50"/>
+                                        <Image Source="stopwatch.png" HeightRequest="50"/>
+                                        <Image Source="puzzle.png" HeightRequest="50"/>
+                                    </HorizontalStackLayout>
+                                </ScrollView>
                                 
                             </VerticalStackLayout>
                         </Frame>

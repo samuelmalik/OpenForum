@@ -67,7 +67,17 @@ namespace OpenForum.ViewModel
             IsBusy = true;
             await UserService.UpdateStatus(Id, Status);
             User.currentUser.Status = Status;
-            User.All[Int32.Parse(Id)-1].Status = Status;
+            int index;
+
+            for (int i = 0; i < User.All.Count; i++)
+            {
+                if (User.All[i].Id == Id)
+                {
+                    index = i;
+                    User.All[index].Status = Status;
+                    break;
+                }
+            }
             IsBusy = false;
         }
     }
