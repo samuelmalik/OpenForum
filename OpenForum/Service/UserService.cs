@@ -159,7 +159,7 @@ namespace OpenForum.Service
                 await connection.OpenAsync();
 
                 // query
-                string query = "SELECT * FROM users";
+                string query = "SELECT * FROM users ORDER BY is_admin DESC, username";
 
                 // command and parameters
                 using (MySqlCommand command = new MySqlCommand(query, connection))
