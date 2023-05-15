@@ -51,9 +51,17 @@
                 IsRunning="{Binding IsBusy}"
                 Color="#E94560"/>
         </HorizontalStackLayout>
-
-
         
+        <!-- Status -->
+        <VerticalStackLayout  Grid.Column="2" Grid.Row="2">
+            <Label Text="Status:" HorizontalOptions="Center" TextColor="#E94560"/>
+            <Frame BackgroundColor="Transparent" Padding="0" BorderColor="#E94560" WidthRequest="200" HeightRequest="150">
+                <Editor WidthRequest="200" HeightRequest="150" BackgroundColor="Transparent" MaxLength="100" TextColor="#E94560"
+                        Text="{Binding User.Status}" IsReadOnly="True"/>
+            </Frame>
+        </VerticalStackLayout>
+
+
     </Grid>
 
 </ContentPage>
