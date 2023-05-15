@@ -39,9 +39,30 @@ namespace OpenForum.ViewModel
         [ObservableProperty]
         string setXp;
 
+        [RelayCommand]
+            async Task OnAddXp()
+            {
+                if (AddXp != "") {
 
+                int newXp = Convert.ToInt32(AddXp) + Convert.ToInt32(Xp);
+                Xp = newXp.ToString();
+                User.currentViewedUser.Xp = newXp;
+                AddXp = "";
+                await UserService.UpdateXp(Id, Convert.ToInt32(Xp));
+                }
+            
+            }
 
-
+        [RelayCommand]
+        async Task OnSetXp()
+        {
+            if (SetXp != "") {
+            Xp = Convert.ToInt32(SetXp).ToString();
+                User.currentViewedUser.Xp = Convert.ToInt32(Xp);
+            SetXp = "";
+            await UserService.UpdateXp(Id, Convert.ToInt32(Xp));
+            }
+        }
 
 
         [RelayCommand]
@@ -49,7 +70,7 @@ namespace OpenForum.ViewModel
         {
             IsBusy = true;
             await UserService.UpdateAdminNote(Id, Note);
-            User.currentUser.Note =Note;
+            User.currentUser.Note = Note;
             int index;
 
             for (int i = 0; i < User.All.Count; i++)

@@ -245,6 +245,19 @@ namespace OpenForum.Service
             await command.ExecuteNonQueryAsync();
         }
 
+        // update user's xp
+        public async static Task UpdateXp (string id, int xp)
+        {
+            using MySqlConnection connection = new MySqlConnection(connectionString);
+            string sql = "UPDATE users SET xp = @xp  WHERE user_id = @id";
+            using MySqlCommand command = new MySqlCommand(sql, connection);
+            command.Parameters.AddWithValue("@xp", xp);
+            command.Parameters.AddWithValue("@id", id);
+
+            await connection.OpenAsync();
+            await command.ExecuteNonQueryAsync();
+        }
+
 
     }
 
