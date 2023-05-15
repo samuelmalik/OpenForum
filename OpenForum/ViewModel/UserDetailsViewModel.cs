@@ -7,16 +7,37 @@ using System.Threading.Tasks;
 
 namespace OpenForum.ViewModel
 {
-    [QueryProperty("User", "User")]
+
 
     public partial class UserDetailsViewModel : BaseViewModel
     {
         public UserDetailsViewModel() 
         {
+            Id = User.currentViewedUser.Id;
+            Name = User.currentViewedUser.Name;
+            Xp = User.currentViewedUser.Xp.ToString();
+            Status = User.currentViewedUser.Status;
+            Note = User.currentViewedUser.Note;
         }
 
         [ObservableProperty]
-        User user;
+        string id;
+        [ObservableProperty]
+        string name;
+        [ObservableProperty]
+        string note;
+        [ObservableProperty]
+        string xp;
+        [ObservableProperty]
+        string status;
+
+
+
+
+        [ObservableProperty]
+        string addXp;
+        [ObservableProperty]
+        string setXp;
 
 
 
@@ -27,22 +48,24 @@ namespace OpenForum.ViewModel
         async Task OnSave()
         {
             IsBusy = true;
-            await UserService.UpdateAdminNote(User.Id, User.Note);
-            User.currentUser.Note = User.Note;
+            await UserService.UpdateAdminNote(Id, Note);
+            User.currentUser.Note =Note;
             int index;
 
             for (int i = 0; i < User.All.Count; i++)
             {
-                if (User.All[i].Id == User.Id)
+                if (User.All[i].Id == Id)
                 {
                     index = i;
-                    User.All[index].Note = User.Note;
+                    User.All[index].Note = Note;
                     break;
                 }
             }
             IsBusy = false;
         }
 
+       
+  
     }
 
 

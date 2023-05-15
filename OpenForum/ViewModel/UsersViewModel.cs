@@ -28,11 +28,9 @@ namespace OpenForum.ViewModel
         {
             if (user == null || IsCurrentUserAdmin == false) return;
 
-            await Shell.Current.GoToAsync($"{nameof(UserDetailsPage)}", true,
-                new Dictionary<string, object>
-                {
-                {"User", user}
-                });
+            User.currentViewedUser = user;
+            await Shell.Current.GoToAsync($"{nameof(UserDetailsPage)}", true);
+            
         }
 
         [RelayCommand]

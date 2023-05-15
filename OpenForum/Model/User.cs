@@ -11,6 +11,7 @@ namespace OpenForum.Model
         public static List<User> All = new List<User>();
         public static int currentUserID;
         public static User currentUser;
+        public static User currentViewedUser;
 
         public User() { }
 

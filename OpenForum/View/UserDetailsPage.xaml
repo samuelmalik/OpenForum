@@ -15,18 +15,64 @@
 
         <!-- currently viewing -->
         <HorizontalStackLayout Grid.Row="0" Grid.Column="1" Spacing="10">
-            <Label Text="User:" TextColor="#E94560" FontSize="20" VerticalOptions="End"/>
-            <Label Text="{Binding User.Name}" TextColor="#E94560" FontSize="20" VerticalOptions="End"/>
+            <Label Text="User:" TextColor="#E94560" FontSize="20" VerticalOptions="Start"/>
+            <Label Text="{Binding Name}" TextColor="#E94560" FontSize="20" VerticalOptions="Start"/>
         </HorizontalStackLayout>
 
         <!-- id -->
-        <HorizontalStackLayout Grid.Row="0" Grid.Column="2" HorizontalOptions="End" >
+        <HorizontalStackLayout Grid.Row="0" Grid.Column="2" HorizontalOptions="End" Margin="0,0,15,0">
             <Label Text="ID  #" TextColor="#E94560"/>
-            <Label Text="{Binding User.Id}" TextColor="#E94560" FontAttributes="Bold"/>
+            <Label Text="{Binding Id}" TextColor="#E94560" FontAttributes="Bold"/>
         </HorizontalStackLayout>
 
         <!-- xp -->
-        <Label Grid.Row="0" Grid.Column="0" Text="{Binding User.Xp, StringFormat='Experience: {0} xp'}" TextColor="#E94560"/>
+        <VerticalStackLayout Grid.Row="0" Grid.Column="0" Margin="15,0,0,0">
+            <Label Text="{Binding Xp, StringFormat='Experience: {0} xp'}" TextColor="#E94560"/>
+            
+            <!-- Set xp -->
+            <VerticalStackLayout Margin="0,20,0,0">
+                <Label Text="Set xp for user:" TextColor="#E94560"/>
+                <HorizontalStackLayout>
+                    <Frame BorderColor="#E94560" BackgroundColor="Transparent" Padding="0" WidthRequest="100">
+                        <Entry  TextColor="#E94560" WidthRequest="100" Text=""/>
+                    </Frame>
+                    <!-- Xp set button -->
+                    <Button Text="Set" HeightRequest="30" WidthRequest="60" HorizontalOptions="Start" VerticalOptions="End" Margin="10,0,0,0" Padding="0"
+                        BackgroundColor="#E94560" TextColor="#16213E" FontAttributes="Bold"
+                        
+                        IsVisible="{Binding IsNotBusy}"/>
+                    <!-- Activity indicator -->
+                    <ActivityIndicator
+                    HeightRequest="30" WidthRequest="60" HorizontalOptions="Start" VerticalOptions="End" Margin="10,0,0,0"
+                    IsVisible="{Binding IsBusy}"
+                    IsRunning="{Binding IsBusy}"
+                    Color="#E94560"/>   
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+
+            <!-- Add xp -->
+            <VerticalStackLayout Margin="0,20,0,0">
+                <Label Text="Add xp to user:" TextColor="#E94560"/>
+                <HorizontalStackLayout>
+                    <Frame BorderColor="#E94560" BackgroundColor="Transparent" Padding="0" WidthRequest="100">
+                        <Entry  TextColor="#E94560" WidthRequest="100" Text=""/>
+                    </Frame>
+                    <!-- Xp add button -->
+                    <Button Text="Add" HeightRequest="30" WidthRequest="60" HorizontalOptions="Start" VerticalOptions="End" Margin="10,0,0,0" Padding="0"
+                        BackgroundColor="#E94560" TextColor="#16213E" FontAttributes="Bold"
+                        Command="{Binding SaveCommand}"
+                        IsVisible="{Binding IsNotBusy}"/>
+                    <!-- Activity indicator -->
+                    <ActivityIndicator
+                    HeightRequest="30" WidthRequest="60" HorizontalOptions="Start" VerticalOptions="End" Margin="10,0,0,0"
+                    IsVisible="{Binding IsBusy}"
+                    IsRunning="{Binding IsBusy}"
+                    Color="#E94560"/>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+
+
+        </VerticalStackLayout>
 
         <!-- Admin note -->
         <HorizontalStackLayout Grid.Column="0" Grid.Row="2" HorizontalOptions="Start" Grid.ColumnSpan="2" Margin="15,0,0,15">
@@ -35,7 +81,7 @@
                 <Frame BackgroundColor="Transparent" Padding="0" BorderColor="#E94560" WidthRequest="200" HeightRequest="250">
                     <Editor WidthRequest="200" HeightRequest="250" BackgroundColor="Transparent" MaxLength="100"
                                 Placeholder="Write your note for this user here..." PlaceholderColor="#E94560" TextColor="#E94560"
-                                Text="{Binding User.Note}"/>
+                                Text="{Binding Note}" CursorPosition="100"/>
                 </Frame>
             </VerticalStackLayout>
 
@@ -53,11 +99,11 @@
         </HorizontalStackLayout>
         
         <!-- Status -->
-        <VerticalStackLayout  Grid.Column="2" Grid.Row="2">
+        <VerticalStackLayout  Grid.Column="2" Grid.Row="2" HorizontalOptions="End" Margin="0,0,10,0">
             <Label Text="Status:" HorizontalOptions="Center" TextColor="#E94560"/>
             <Frame BackgroundColor="Transparent" Padding="0" BorderColor="#E94560" WidthRequest="200" HeightRequest="150">
                 <Editor WidthRequest="200" HeightRequest="150" BackgroundColor="Transparent" MaxLength="100" TextColor="#E94560"
-                        Text="{Binding User.Status}" IsReadOnly="True"/>
+                        Text="{Binding Status}" IsReadOnly="True"/>
             </Frame>
         </VerticalStackLayout>
 
