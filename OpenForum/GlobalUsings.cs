@@ -7,3 +7,4 @@ global using CommunityToolkit.Mvvm.ComponentModel;
 global using OpenForum.Model;
 global using OpenForum.ViewModel;
 global using OpenForum.View;
+global using OpenForum.Service;

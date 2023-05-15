@@ -4,8 +4,56 @@
              x:Class="OpenForum.View.UserDetailsPage"
              xmlns:viewmodel="clr-namespace:OpenForum.ViewModel"
              x:DataType="viewmodel:UserDetailsViewModel"
+              BackgroundColor="#16213E"
              >
 
-    <Label Text="{Binding User.Name}" IsVisible="{Binding User.HelloXamarin}"/>
+    <Grid Grid.Row="1" Grid.Column="1"
+              Grid.RowSpan="3"
+              ColumnDefinitions="*,auto,*"
+              RowDefinitions="auto,*,auto"
+              Margin="10">
+
+        <!-- currently viewing -->
+        <HorizontalStackLayout Grid.Row="0" Grid.Column="1" Spacing="10">
+            <Label Text="User:" TextColor="#E94560" FontSize="20" VerticalOptions="End"/>
+            <Label Text="{Binding User.Name}" TextColor="#E94560" FontSize="20" VerticalOptions="End"/>
+        </HorizontalStackLayout>
+
+        <!-- id -->
+        <HorizontalStackLayout Grid.Row="0" Grid.Column="2" HorizontalOptions="End" >
+            <Label Text="ID  #" TextColor="#E94560"/>
+            <Label Text="{Binding User.Id}" TextColor="#E94560" FontAttributes="Bold"/>
+        </HorizontalStackLayout>
+
+        <!-- xp -->
+        <Label Grid.Row="0" Grid.Column="0" Text="{Binding User.Xp, StringFormat='Experience: {0} xp'}" TextColor="#E94560"/>
+
+        <!-- Admin note -->
+        <HorizontalStackLayout Grid.Column="0" Grid.Row="2" HorizontalOptions="Start" Grid.ColumnSpan="2" Margin="15,0,0,15">
+            <VerticalStackLayout>
+                <Label Text="Note:" HorizontalOptions="Center" TextColor="#E94560"/>
+                <Frame BackgroundColor="Transparent" Padding="0" BorderColor="#E94560" WidthRequest="200" HeightRequest="250">
+                    <Editor WidthRequest="200" HeightRequest="250" BackgroundColor="Transparent" MaxLength="100"
+                                Placeholder="Write your note for this user here..." PlaceholderColor="#E94560" TextColor="#E94560"
+                                Text="{Binding User.Note}"/>
+                </Frame>
+            </VerticalStackLayout>
+
+            <!-- Admin Note save button -->
+            <Button Text="Save" HeightRequest="40" WidthRequest="60" HorizontalOptions="Start" VerticalOptions="End" Margin="10,0,0,10"
+                        BackgroundColor="#E94560" TextColor="#16213E" FontAttributes="Bold"
+                        Command="{Binding SaveCommand}"
+                        IsVisible="{Binding IsNotBusy}"/>
+            <!-- Activity indicator -->
+            <ActivityIndicator
+                HeightRequest="40" WidthRequest="60" HorizontalOptions="Start" VerticalOptions="End" Margin="10,0,0,10"
+                IsVisible="{Binding IsBusy}"
+                IsRunning="{Binding IsBusy}"
+                Color="#E94560"/>
+        </HorizontalStackLayout>
+
+
+        
+    </Grid>
 
 </ContentPage>

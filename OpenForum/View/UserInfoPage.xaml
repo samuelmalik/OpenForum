@@ -82,7 +82,8 @@
         <Grid Grid.Row="1" Grid.Column="1"
               Grid.RowSpan="3"
               ColumnDefinitions="*,auto,*"
-              RowDefinitions="auto,*,auto">
+              RowDefinitions="auto,*,auto"
+              Margin="10">
             
             <!-- currently logged -->
             <HorizontalStackLayout Grid.Row="0" Grid.Column="1" Spacing="10">
@@ -92,7 +93,7 @@
 
             <!-- id -->
             <HorizontalStackLayout Grid.Row="0" Grid.Column="2" HorizontalOptions="End" >
-                <Label Text="your ID is: #" TextColor="#E94560"/>
+                <Label Text="your ID is:  #" TextColor="#E94560"/>
                 <Label Text="{Binding Id}" TextColor="#E94560" FontAttributes="Bold"/>
             </HorizontalStackLayout>
             

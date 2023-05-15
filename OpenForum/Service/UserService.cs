@@ -231,7 +231,22 @@ namespace OpenForum.Service
             await connection.OpenAsync();
             await command.ExecuteNonQueryAsync();
         }
+
+        // update user's note
+        public async static Task UpdateAdminNote(string id, string note)
+        {
+            using MySqlConnection connection = new MySqlConnection(connectionString);
+            string sql = "UPDATE users SET note = @note  WHERE user_id = @id";
+            using MySqlCommand command = new MySqlCommand(sql, connection);
+            command.Parameters.AddWithValue("@note", note);
+            command.Parameters.AddWithValue("@id", id);
+
+            await connection.OpenAsync();
+            await command.ExecuteNonQueryAsync();
+        }
+
+
     }
-        
+
 
 }
