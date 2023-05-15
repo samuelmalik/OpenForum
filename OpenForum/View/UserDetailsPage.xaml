@@ -6,6 +6,6 @@
              x:DataType="viewmodel:UserDetailsViewModel"
              >
 
-    <Label Text="{Binding User.Name}"/>
+    <Label Text="{Binding User.Name}" IsVisible="{Binding User.HelloXamarin}"/>
 
 </ContentPage>

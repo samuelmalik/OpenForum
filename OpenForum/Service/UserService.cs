@@ -178,7 +178,37 @@ namespace OpenForum.Service
                                 Note = reader["note"].ToString(),
                                 Xp = Convert.ToInt32(reader["xp"]),
                                 Status = reader["status"].ToString(),
-                                Discord = reader["username"].ToString().Contains("a")
+                                
+                                Slack = reader["achievements"].ToString().Contains(",1,"),
+                                Discord = reader["achievements"].ToString().Contains(",2,"),
+                                Aktivita = reader["achievements"].ToString().Contains(",3,"),
+                                Rychlost = reader["achievements"].ToString().Contains(",4,"),
+                                Pomocnik = reader["achievements"].ToString().Contains(",5,"),
+                                Nacas = reader["achievements"].ToString().Contains(",6,"),
+                                DobryNapad = reader["achievements"].ToString().Contains(",7,"),
+                                ChristmassCoder = reader["achievements"].ToString().Contains(",8,"),
+                                Presenter = reader["achievements"].ToString().Contains(",9,"),
+                                QuizzMaster = reader["achievements"].ToString().Contains(",10,"),
+                                GitHub = reader["achievements"].ToString().Contains(",11,"),
+                                Cvicenia10 = reader["achievements"].ToString().Contains(",12,"),
+                                Cvicenia20 = reader["achievements"].ToString().Contains(",13,"),
+                                Cvicenia30 = reader["achievements"].ToString().Contains(",14,"),
+                                Cvicenia40 = reader["achievements"].ToString().Contains(",15,"),
+                                Cvicenia50 = reader["achievements"].ToString().Contains(",16,"),
+                                GildedRose = reader["achievements"].ToString().Contains(",17,"),
+                                OOPBasics = reader["achievements"].ToString().Contains(",18,"),
+                                HousingEstate = reader["achievements"].ToString().Contains(",19,"),
+                                CodingGame = reader["achievements"].ToString().Contains(",20,"),
+                                CGHorseRacing = reader["achievements"].ToString().Contains(",21,"),
+                                CGTemperatures = reader["achievements"].ToString().Contains(",22,"),
+                                CGCircuitResistance = reader["achievements"].ToString().Contains(",23,"),
+                                HelloXamarin = reader["achievements"].ToString().Contains(",24,"),
+                                BeatsPerMinute = reader["achievements"].ToString().Contains(",25,"),
+                                Mvvm = reader["achievements"].ToString().Contains(",26,"),
+                                Stopwatch = reader["achievements"].ToString().Contains(",27,"),
+                                Puzzle = reader["achievements"].ToString().Contains(",28,")
+
+
 
                             };
                             User.All.Add(user);
