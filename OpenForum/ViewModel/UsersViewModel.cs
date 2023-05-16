@@ -29,7 +29,7 @@ namespace OpenForum.ViewModel
             if (user == null || IsCurrentUserAdmin == false) return;
 
             User.currentViewedUser = user;
-            await Shell.Current.GoToAsync($"{nameof(UserDetailsPage)}", true);
+            await Shell.Current.GoToAsync($"../{nameof(UserDetailsPage)}", true);
             
         }
 

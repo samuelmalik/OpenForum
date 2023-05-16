@@ -117,7 +117,7 @@ namespace OpenForum.ViewModel
         [RelayCommand]
         void NavigateToUsersPage()
         {
-            Shell.Current.GoToAsync($"../../{nameof(UsersPage)}", false);
+            Shell.Current.GoToAsync($"../{nameof(UsersPage)}", false);
         }
 
 
