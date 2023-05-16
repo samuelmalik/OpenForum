@@ -7,6 +7,10 @@
               BackgroundColor="#16213E"
              >
 
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior Command="{Binding NavigateToUsersPageCommand}"/>
+    </Shell.BackButtonBehavior>
+
     <Grid Grid.Row="1" Grid.Column="1"
               Grid.RowSpan="3"
               ColumnDefinitions="*,auto,*"
