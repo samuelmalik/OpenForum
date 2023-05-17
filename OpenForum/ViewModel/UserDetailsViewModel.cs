@@ -157,6 +157,397 @@ namespace OpenForum.ViewModel
                 }
                 await UserService.UpdateAchievements(Id, User.All[index].Achievements);
             }
+            else if (achievement == "3,")
+            {
+                Aktivita = true;
+                for (int i = 0; i < User.All.Count; i++)
+                {
+                    if (User.All[i].Id == Id)
+                    {
+                        index = i;
+                        User.All[i].Aktivita = true;
+                        User.All[i].Achievements += achievement;
+                        break;
+                    }
+                }
+                await UserService.UpdateAchievements(Id, User.All[index].Achievements);
+            }
+            else if (achievement == "4,")
+            {
+                Rychlost = true;
+                for (int i = 0; i < User.All.Count; i++)
+                {
+                    if (User.All[i].Id == Id)
+                    {
+                        index = i;
+                        User.All[i].Rychlost = true;
+                        User.All[i].Achievements += achievement;
+                        break;
+                    }
+                }
+                await UserService.UpdateAchievements(Id, User.All[index].Achievements);
+            }
+            else if (achievement == "5,")
+            {
+                Pomocnik = true;
+                for (int i = 0; i < User.All.Count; i++)
+                {
+                    if (User.All[i].Id == Id)
+                    {
+                        index = i;
+                        User.All[i].Pomocnik = true;
+                        User.All[i].Achievements += achievement;
+                        break;
+                    }
+                }
+                await UserService.UpdateAchievements(Id, User.All[index].Achievements);
+            }
+            else if (achievement == "6,")
+            {
+                Nacas = true;
+                for (int i = 0; i < User.All.Count; i++)
+                {
+                    if (User.All[i].Id == Id)
+                    {
+                        index = i;
+                        User.All[i].Nacas = true;
+                        User.All[i].Achievements += achievement;
+                        break;
+                    }
+                }
+                await UserService.UpdateAchievements(Id, User.All[index].Achievements);
+            }
+            else if (achievement == "7,")
+            {
+                DobryNapad = true;
+                for (int i = 0; i < User.All.Count; i++)
+                {
+                    if (User.All[i].Id == Id)
+                    {
+                        index = i;
+                        User.All[i].DobryNapad = true;
+                        User.All[i].Achievements += achievement;
+                        break;
+                    }
+                }
+                await UserService.UpdateAchievements(Id, User.All[index].Achievements);
+            }
+            else if (achievement == "8,")
+            {
+                ChristmassCoder = true;
+                for (int i = 0; i < User.All.Count; i++)
+                {
+                    if (User.All[i].Id == Id)
+                    {
+                        index = i;
+                        User.All[i].ChristmassCoder = true;
+                        User.All[i].Achievements += achievement;
+                        break;
+                    }
+                }
+                await UserService.UpdateAchievements(Id, User.All[index].Achievements);
+            }
+            else if (achievement == "9,")
+            {
+                Presenter = true;
+                for (int i = 0; i < User.All.Count; i++)
+                {
+                    if (User.All[i].Id == Id)
+                    {
+                        index = i;
+                        User.All[i].Presenter = true;
+                        User.All[i].Achievements += achievement;
+                        break;
+                    }
+                }
+                await UserService.UpdateAchievements(Id, User.All[index].Achievements);
+            }
+            else if (achievement == "10,")
+            {
+                QuizzMaster = true;
+                for (int i = 0; i < User.All.Count; i++)
+                {
+                    if (User.All[i].Id == Id)
+                    {
+                        index = i;
+                        User.All[i].QuizzMaster = true;
+                        User.All[i].Achievements += achievement;
+                        break;
+                    }
+                }
+                await UserService.UpdateAchievements(Id, User.All[index].Achievements);
+            }
+            else if (achievement == "11,")
+            {
+                GitHub = true;
+                for (int i = 0; i < User.All.Count; i++)
+                {
+                    if (User.All[i].Id == Id)
+                    {
+                        index = i;
+                        User.All[i].GitHub = true;
+                        User.All[i].Achievements += achievement;
+                        break;
+                    }
+                }
+                await UserService.UpdateAchievements(Id, User.All[index].Achievements);
+            }
+            else if (achievement == "12,")
+            {
+                Cvicenia10 = true;
+                for (int i = 0; i < User.All.Count; i++)
+                {
+                    if (User.All[i].Id == Id)
+                    {
+                        index = i;
+                        User.All[i].Cvicenia10 = true;
+                        User.All[i].Achievements += achievement;
+                        break;
+                    }
+                }
+                await UserService.UpdateAchievements(Id, User.All[index].Achievements);
+            }
+            else if (achievement == "13,")
+            {
+                Cvicenia20 = true;
+                for (int i = 0; i < User.All.Count; i++)
+                {
+                    if (User.All[i].Id == Id)
+                    {
+                        index = i;
+                        User.All[i].Cvicenia20 = true;
+                        User.All[i].Achievements += achievement;
+                        break;
+                    }
+                }
+                await UserService.UpdateAchievements(Id, User.All[index].Achievements);
+            }
+            else if (achievement == "14,")
+            {
+                Cvicenia30 = true;
+                for (int i = 0; i < User.All.Count; i++)
+                {
+                    if (User.All[i].Id == Id)
+                    {
+                        index = i;
+                        User.All[i].Cvicenia30 = true;
+                        User.All[i].Achievements += achievement;
+                        break;
+                    }
+                }
+                await UserService.UpdateAchievements(Id, User.All[index].Achievements);
+            }
+            else if (achievement == "15,")
+            {
+                Cvicenia40 = true;
+                for (int i = 0; i < User.All.Count; i++)
+                {
+                    if (User.All[i].Id == Id)
+                    {
+                        index = i;
+                        User.All[i].Cvicenia40 = true;
+                        User.All[i].Achievements += achievement;
+                        break;
+                    }
+                }
+                await UserService.UpdateAchievements(Id, User.All[index].Achievements);
+            }
+            else if (achievement == "16,")
+            {
+                Cvicenia50 = true;
+                for (int i = 0; i < User.All.Count; i++)
+                {
+                    if (User.All[i].Id == Id)
+                    {
+                        index = i;
+                        User.All[i].Cvicenia50 = true;
+                        User.All[i].Achievements += achievement;
+                        break;
+                    }
+                }
+                await UserService.UpdateAchievements(Id, User.All[index].Achievements);
+            }
+            else if (achievement == "17,")
+            {
+                GildedRose = true;
+                for (int i = 0; i < User.All.Count; i++)
+                {
+                    if (User.All[i].Id == Id)
+                    {
+                        index = i;
+                        User.All[i].GildedRose = true;
+                        User.All[i].Achievements += achievement;
+                        break;
+                    }
+                }
+                await UserService.UpdateAchievements(Id, User.All[index].Achievements);
+            }
+            else if (achievement == "18,")
+            {
+                OopBasics = true;
+                for (int i = 0; i < User.All.Count; i++)
+                {
+                    if (User.All[i].Id == Id)
+                    {
+                        index = i;
+                        User.All[i].OOPBasics = true;
+                        User.All[i].Achievements += achievement;
+                        break;
+                    }
+                }
+                await UserService.UpdateAchievements(Id, User.All[index].Achievements);
+            }
+            else if (achievement == "19,")
+            {
+                HousingEstate = true;
+                for (int i = 0; i < User.All.Count; i++)
+                {
+                    if (User.All[i].Id == Id)
+                    {
+                        index = i;
+                        User.All[i].HousingEstate = true;
+                        User.All[i].Achievements += achievement;
+                        break;
+                    }
+                }
+                await UserService.UpdateAchievements(Id, User.All[index].Achievements);
+            }
+            else if (achievement == "20,")
+            {
+                CodingGame = true;
+                for (int i = 0; i < User.All.Count; i++)
+                {
+                    if (User.All[i].Id == Id)
+                    {
+                        index = i;
+                        User.All[i].CodingGame = true;
+                        User.All[i].Achievements += achievement;
+                        break;
+                    }
+                }
+                await UserService.UpdateAchievements(Id, User.All[index].Achievements);
+            }
+            else if (achievement == "21,")
+            {
+                CgHorseRacing = true;
+                for (int i = 0; i < User.All.Count; i++)
+                {
+                    if (User.All[i].Id == Id)
+                    {
+                        index = i;
+                        User.All[i].CGHorseRacing = true;
+                        User.All[i].Achievements += achievement;
+                        break;
+                    }
+                }
+                await UserService.UpdateAchievements(Id, User.All[index].Achievements);
+            }
+            else if (achievement == "22,")
+            {
+                CgTemperatures = true;
+                for (int i = 0; i < User.All.Count; i++)
+                {
+                    if (User.All[i].Id == Id)
+                    {
+                        index = i;
+                        User.All[i].CGTemperatures = true;
+                        User.All[i].Achievements += achievement;
+                        break;
+                    }
+                }
+                await UserService.UpdateAchievements(Id, User.All[index].Achievements);
+            }
+            else if (achievement == "23,")
+            {
+                CgCircuitResistance = true;
+                for (int i = 0; i < User.All.Count; i++)
+                {
+                    if (User.All[i].Id == Id)
+                    {
+                        index = i;
+                        User.All[i].CGCircuitResistance = true;
+                        User.All[i].Achievements += achievement;
+                        break;
+                    }
+                }
+                await UserService.UpdateAchievements(Id, User.All[index].Achievements);
+            }
+            else if (achievement == "24,")
+            {
+                HelloXamarin = true;
+                for (int i = 0; i < User.All.Count; i++)
+                {
+                    if (User.All[i].Id == Id)
+                    {
+                        index = i;
+                        User.All[i].HelloXamarin = true;
+                        User.All[i].Achievements += achievement;
+                        break;
+                    }
+                }
+                await UserService.UpdateAchievements(Id, User.All[index].Achievements);
+            }
+            else if (achievement == "25,")
+            {
+                BeatsPerMinute = true;
+                for (int i = 0; i < User.All.Count; i++)
+                {
+                    if (User.All[i].Id == Id)
+                    {
+                        index = i;
+                        User.All[i].BeatsPerMinute = true;
+                        User.All[i].Achievements += achievement;
+                        break;
+                    }
+                }
+                await UserService.UpdateAchievements(Id, User.All[index].Achievements);
+            }
+            else if (achievement == "26,")
+            {
+                Mvvm = true;
+                for (int i = 0; i < User.All.Count; i++)
+                {
+                    if (User.All[i].Id == Id)
+                    {
+                        index = i;
+                        User.All[i].Mvvm = true;
+                        User.All[i].Achievements += achievement;
+                        break;
+                    }
+                }
+                await UserService.UpdateAchievements(Id, User.All[index].Achievements);
+            }
+            else if (achievement == "27,")
+            {
+                Stopwatch = true;
+                for (int i = 0; i < User.All.Count; i++)
+                {
+                    if (User.All[i].Id == Id)
+                    {
+                        index = i;
+                        User.All[i].Stopwatch = true;
+                        User.All[i].Achievements += achievement;
+                        break;
+                    }
+                }
+                await UserService.UpdateAchievements(Id, User.All[index].Achievements);
+            }
+            else if (achievement == "28,")
+            {
+                Puzzle = true;
+                for (int i = 0; i < User.All.Count; i++)
+                {
+                    if (User.All[i].Id == Id)
+                    {
+                        index = i;
+                        User.All[i].Puzzle = true;
+                        User.All[i].Achievements += achievement;
+                        break;
+                    }
+                }
+                await UserService.UpdateAchievements(Id, User.All[index].Achievements);
+            }
+            
         }
 
 

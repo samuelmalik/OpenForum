@@ -113,7 +113,7 @@
         </VerticalStackLayout>
         
         <!-- Achievements -->
-            <VerticalStackLayout Grid.Column="1" Grid.Row="2" MaximumWidthRequest="500" Background="#16213E">
+            <VerticalStackLayout Grid.Column="1" Grid.Row="2" MaximumWidthRequest="450" Background="#16213E">
                 <Label Text="Gained achievements:" TextColor="#E94560" Margin="0,0,0,10"/>
                 <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Default" >
                     <HorizontalStackLayout Margin="10,0,10,20" Spacing="5">
@@ -162,33 +162,168 @@
                                                       CommandParameter="1,"/>
                             </Image.GestureRecognizers>
                         </Image>
-                        <Image Source="discord.png" HeightRequest="50" IsVisible="{Binding nDiscord}"/>
-                        <Image Source="aktivita.png" HeightRequest="50" IsVisible="{Binding nAktivita}"/>
-                        <Image Source="rychlost.png" HeightRequest="50" IsVisible="{Binding nRychlost}"/>
-                        <Image Source="pomocnik.png" HeightRequest="50" IsVisible="{Binding nPomocnik}"/>
-                        <Image Source="nacas.png" HeightRequest="50" IsVisible="{Binding nNacas}"/>
-                        <Image Source="dobry_napad.png" HeightRequest="50" IsVisible="{Binding nDobryNapad}"/>
-                        <Image Source="christmass_coder.png" HeightRequest="50" IsVisible="{Binding nChristmassCoder}"/>
-                        <Image Source="presenter.png" HeightRequest="50" IsVisible="{Binding nPresenter}"/>
-                        <Image Source="quizz_master.png" HeightRequest="50" IsVisible="{Binding nQuizzMaster}"/>
-                        <Image Source="github.png" HeightRequest="50" IsVisible="{Binding nGitHub}"/>
-                        <Image Source="cvicenia_10.png" HeightRequest="50" IsVisible="{Binding nCvicenia10}"/>
-                        <Image Source="cvicenia_20.png" HeightRequest="50" IsVisible="{Binding nCvicenia20}"/>
-                        <Image Source="cvicenia_30.png" HeightRequest="50" IsVisible="{Binding nCvicenia30}"/>
-                        <Image Source="cvicenia_40.png" HeightRequest="50" IsVisible="{Binding nCvicenia40}"/>
-                        <Image Source="cvicenia_50.png" HeightRequest="50" IsVisible="{Binding nCvicenia50}"/>
-                        <Image Source="gilded_rose.png" HeightRequest="50" IsVisible="{Binding nGildedRose}"/>
-                        <Image Source="oop_basics.png" HeightRequest="50" BackgroundColor="#CCC" IsVisible="{Binding nOOPBasics}"/>
-                        <Image Source="housing_estate.png" HeightRequest="50" IsVisible="{Binding nHousingEstate}"/>
-                        <Image Source="coding_game.png" HeightRequest="50" IsVisible="{Binding nCodingGame}"/>
-                        <Image Source="cg_horse_racing.png" HeightRequest="50" IsVisible="{Binding nCGHorseRacing}"/>
-                        <Image Source="cg_temperatures.png" HeightRequest="50" IsVisible="{Binding nCGTemperatures}"/>
-                        <Image Source="cg_circuit_resistance.png" HeightRequest="50" IsVisible="{Binding nCGCircuitResistance}"/>
-                        <Image Source="hello_xamarin.png" HeightRequest="50" IsVisible="{Binding nHelloXamarin}"/>
-                        <Image Source="beats_per_minute.png" HeightRequest="50" BackgroundColor="#CCC" IsVisible="{Binding nBeatsPerMinute}"/>
-                        <Image Source="mvvm.png" HeightRequest="50" IsVisible="{Binding nMvvm}"/>
-                        <Image Source="stopwatch.png" HeightRequest="50" IsVisible="{Binding nStopwatch}"/>
-                        <Image Source="puzzle.png" HeightRequest="50" IsVisible="{Binding nPuzzle}"/>
+                        <Image Source="discord.png" HeightRequest="50" IsVisible="{Binding nDiscord}">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding AddAchievementsCommand}"
+                                                      CommandParameter="2,"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image Source="aktivita.png" HeightRequest="50" IsVisible="{Binding nAktivita}">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding AddAchievementsCommand}"
+                                                      CommandParameter="3,"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image Source="rychlost.png" HeightRequest="50" IsVisible="{Binding nRychlost}">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding AddAchievementsCommand}"
+                                                      CommandParameter="4,"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image Source="pomocnik.png" HeightRequest="50" IsVisible="{Binding nPomocnik}">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding AddAchievementsCommand}"
+                                                      CommandParameter="5,"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image Source="nacas.png" HeightRequest="50" IsVisible="{Binding nNacas}">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding AddAchievementsCommand}"
+                                                      CommandParameter="6,"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image Source="dobry_napad.png" HeightRequest="50" IsVisible="{Binding nDobryNapad}">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding AddAchievementsCommand}"
+                                                      CommandParameter="7,"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image Source="christmass_coder.png" HeightRequest="50" IsVisible="{Binding nChristmassCoder}">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding AddAchievementsCommand}"
+                                                      CommandParameter="8,"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image Source="presenter.png" HeightRequest="50" IsVisible="{Binding nPresenter}">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding AddAchievementsCommand}"
+                                                      CommandParameter="9,"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image Source="quizz_master.png" HeightRequest="50" IsVisible="{Binding nQuizzMaster}">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding AddAchievementsCommand}"
+                                                      CommandParameter="10,"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image Source="github.png" HeightRequest="50" IsVisible="{Binding nGitHub}">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding AddAchievementsCommand}"
+                                                      CommandParameter="11,"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image Source="cvicenia_10.png" HeightRequest="50" IsVisible="{Binding nCvicenia10}">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding AddAchievementsCommand}"
+                                                      CommandParameter="12,"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image Source="cvicenia_20.png" HeightRequest="50" IsVisible="{Binding nCvicenia20}">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding AddAchievementsCommand}"
+                                                      CommandParameter="13,"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image Source="cvicenia_30.png" HeightRequest="50" IsVisible="{Binding nCvicenia30}">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding AddAchievementsCommand}"
+                                                      CommandParameter="14,"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image Source="cvicenia_40.png" HeightRequest="50" IsVisible="{Binding nCvicenia40}">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding AddAchievementsCommand}"
+                                                      CommandParameter="15,"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image Source="cvicenia_50.png" HeightRequest="50" IsVisible="{Binding nCvicenia50}">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding AddAchievementsCommand}"
+                                                      CommandParameter="16,"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image Source="gilded_rose.png" HeightRequest="50" IsVisible="{Binding nGildedRose}">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding AddAchievementsCommand}"
+                                                      CommandParameter="17,"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image Source="oop_basics.png" HeightRequest="50" BackgroundColor="#CCC" IsVisible="{Binding nOOPBasics}">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding AddAchievementsCommand}"
+                                                      CommandParameter="18,"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image Source="housing_estate.png" HeightRequest="50" IsVisible="{Binding nHousingEstate}">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding AddAchievementsCommand}"
+                                                      CommandParameter="19,"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image Source="coding_game.png" HeightRequest="50" IsVisible="{Binding nCodingGame}">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding AddAchievementsCommand}"
+                                                      CommandParameter="20,"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image Source="cg_horse_racing.png" HeightRequest="50" IsVisible="{Binding nCGHorseRacing}">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding AddAchievementsCommand}"
+                                                      CommandParameter="21,"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image Source="cg_temperatures.png" HeightRequest="50" IsVisible="{Binding nCGTemperatures}">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding AddAchievementsCommand}"
+                                                      CommandParameter="22,"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image Source="cg_circuit_resistance.png" HeightRequest="50" IsVisible="{Binding nCGCircuitResistance}">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding AddAchievementsCommand}"
+                                                      CommandParameter="23,"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image Source="hello_xamarin.png" HeightRequest="50" IsVisible="{Binding nHelloXamarin}">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding AddAchievementsCommand}"
+                                                      CommandParameter="24,"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image Source="beats_per_minute.png" HeightRequest="50" BackgroundColor="#CCC" IsVisible="{Binding nBeatsPerMinute}">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding AddAchievementsCommand}"
+                                                      CommandParameter="25,"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image Source="mvvm.png" HeightRequest="50" IsVisible="{Binding nMvvm}">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding AddAchievementsCommand}"
+                                                      CommandParameter="26,"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image Source="stopwatch.png" HeightRequest="50" IsVisible="{Binding nStopwatch}">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding AddAchievementsCommand}"
+                                                      CommandParameter="27,"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image Source="puzzle.png" HeightRequest="50" IsVisible="{Binding nPuzzle}">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding AddAchievementsCommand}"
+                                                      CommandParameter="28,"/>
+                            </Image.GestureRecognizers>
+                        </Image>
                     </HorizontalStackLayout>
                 </ScrollView>
 
