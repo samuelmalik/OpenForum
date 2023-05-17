@@ -122,6 +122,43 @@ namespace OpenForum.ViewModel
             Shell.Current.GoToAsync($"../{nameof(UsersPage)}", false);
         }
 
+        [RelayCommand]
+        async Task AddAchievements(string achievement)
+        {
+            int index = 0;
+
+
+            if (achievement == "1,") 
+            { 
+                Slack = true;
+                for (int i = 0; i < User.All.Count; i++)
+                {
+                    if (User.All[i].Id == Id)
+                    {
+                        index = i;
+                        User.All[i].Slack = true;
+                        User.All[i].Achievements += achievement;
+                        break;
+                    }
+                }
+                await UserService.UpdateAchievements(Id, User.All[index].Achievements);
+            } else if (achievement == "2,")
+            {
+                Discord = true;
+                for (int i = 0; i < User.All.Count; i++)
+                {
+                    if (User.All[i].Id == Id)
+                    {
+                        index = i;
+                        User.All[i].Discord = true;
+                        User.All[i].Achievements += achievement;
+                        break;
+                    }
+                }
+                await UserService.UpdateAchievements(Id, User.All[index].Achievements);
+            }
+        }
+
 
         // Achievements
         [NotifyPropertyChangedFor(nameof(nSlack))]

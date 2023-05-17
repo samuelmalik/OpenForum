@@ -38,6 +38,7 @@ namespace OpenForum.Model
         
         
         // achievements
+        public string Achievements { get; set; }
         public bool Slack { get; set; }
         public bool Discord { get; set; }
         public bool Aktivita { get; set; }

@@ -178,7 +178,8 @@ namespace OpenForum.Service
                                 Note = reader["note"].ToString(),
                                 Xp = Convert.ToInt32(reader["xp"]),
                                 Status = reader["status"].ToString(),
-                                
+                                Achievements = reader["achievements"].ToString(),
+
                                 Slack = reader["achievements"].ToString().Contains(",1,"),
                                 Discord = reader["achievements"].ToString().Contains(",2,"),
                                 Aktivita = reader["achievements"].ToString().Contains(",3,"),
@@ -259,6 +260,19 @@ namespace OpenForum.Service
             string sql = "UPDATE users SET xp = @xp  WHERE user_id = @id";
             using MySqlCommand command = new MySqlCommand(sql, connection);
             command.Parameters.AddWithValue("@xp", xp);
+            command.Parameters.AddWithValue("@id", id);
+
+            await connection.OpenAsync();
+            await command.ExecuteNonQueryAsync();
+        }
+
+        // update user's achievements
+        public async static Task UpdateAchievements(string id, string achievements)
+        {
+            using MySqlConnection connection = new MySqlConnection(connectionString);
+            string sql = "UPDATE users SET achievements = @achievements  WHERE user_id = @id";
+            using MySqlCommand command = new MySqlCommand(sql, connection);
+            command.Parameters.AddWithValue("@achievements", achievements);
             command.Parameters.AddWithValue("@id", id);
 
             await connection.OpenAsync();
