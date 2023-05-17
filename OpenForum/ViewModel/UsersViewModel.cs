@@ -26,7 +26,7 @@ namespace OpenForum.ViewModel
         [RelayCommand]
         async Task GoToDetailsAsync(User user)
         {
-            if (user == null || IsCurrentUserAdmin == false) return;
+            if (user == null || user.IsAdmin == 1 || IsCurrentUserAdmin == false) return;
 
             User.currentViewedUser = user;
             await Shell.Current.GoToAsync($"../{nameof(UserDetailsPage)}", true);

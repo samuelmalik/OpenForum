@@ -13,7 +13,10 @@ namespace OpenForum.Model
         public static User currentUser;
         public static User currentViewedUser;
 
-        public User() { }
+        public User() 
+        {
+            
+        }
 
 
         public User(string n, string p, int admin, int exp) 
@@ -28,6 +31,7 @@ namespace OpenForum.Model
         public string Name { get; set; }
         public string Pass { get; set; }
         public int IsAdmin { get; set; }
+        public int IsNotAdmin { get; set; }
         public string Note { get; set; }
         public int Xp { get; set; }
         public string Status { get; set; }

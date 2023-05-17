@@ -107,19 +107,22 @@
                                             </Image>
                                         </HorizontalStackLayout>
                                         <Label FontFamily="Arial" Margin="5" FontSize="50" FontAttributes="Bold" Text="{Binding Name}" VerticalOptions="Center"/>
-                                        <Label FontFamily="Arial"  Margin="5" FontSize="30" Text="{Binding Xp, StringFormat='Experience points: {0}'}" VerticalOptions="End"/>
+                                        <Label FontFamily="Arial"  Margin="5" FontSize="30" Text="{Binding Xp, StringFormat='Experience points: {0}'}" VerticalOptions="End" IsVisible="{Binding IsNotAdmin}"/>
                                     </VerticalStackLayout>
                                     <VerticalStackLayout>
                                         <Label FontFamily="Arial"  Margin="5" FontSize="30" Text="Status:" TextColor="#E94560" VerticalOptions="Start"/>
                                         <Label FontFamily="Arial"  Margin="5" FontSize="30" Text="{Binding Status}" VerticalOptions="Center" MaximumWidthRequest="400"/>
-                                        <Label FontFamily="Arial"  Margin="5" FontSize="30" Text="Admin note:" TextColor="#E94560" VerticalOptions="Start" IsVisible="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:UsersViewModel}}, Path=IsCurrentUserAdmin}"/>
-                                        <Label FontFamily="Arial"  Margin="5" FontSize="30" Text="{Binding Note}" VerticalOptions="Center" MaximumWidthRequest="400" IsVisible="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:UsersViewModel}}, Path=IsCurrentUserAdmin}"/>
+                                        <VerticalStackLayout IsVisible="{Binding IsNotAdmin}">
+                                            <Label FontFamily="Arial"  Margin="5" FontSize="30" Text="Admin note:" TextColor="#E94560" VerticalOptions="Start" IsVisible="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:UsersViewModel}}, Path=IsCurrentUserAdmin}"/>
+                                            <Label FontFamily="Arial"  Margin="5" FontSize="30" Text="{Binding Note}" VerticalOptions="Center" MaximumWidthRequest="400" IsVisible="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:UsersViewModel}}, Path=IsCurrentUserAdmin}"/>
+                                        </VerticalStackLayout>
+                                        
 
                                     </VerticalStackLayout>
 
                                 </HorizontalStackLayout>
                                 <!-- achievements -->
-                                <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Default"  BackgroundColor="#0F3460">
+                                <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Default"  BackgroundColor="#0F3460" IsVisible="{Binding IsNotAdmin}">
                                     <HorizontalStackLayout Margin="10,0,10,20" Spacing="5">
                                         <Image Source="slack.png" HeightRequest="50" IsVisible="{Binding Slack}"/>
                                         <Image Source="discord.png" HeightRequest="50" IsVisible="{Binding Discord}"/>

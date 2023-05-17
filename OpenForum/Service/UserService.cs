@@ -207,10 +207,17 @@ namespace OpenForum.Service
                                 Mvvm = reader["achievements"].ToString().Contains(",26,"),
                                 Stopwatch = reader["achievements"].ToString().Contains(",27,"),
                                 Puzzle = reader["achievements"].ToString().Contains(",28,")
-
-
-
                             };
+
+
+                            if (Convert.ToInt32(reader["is_admin"]) == 1)
+                            {
+                                user.IsNotAdmin = 0;
+                            }
+                            else { user.IsNotAdmin = 1; }
+
+
+                            
                             User.All.Add(user);
                         }
                     }
