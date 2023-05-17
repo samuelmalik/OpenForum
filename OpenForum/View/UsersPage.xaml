@@ -11,6 +11,7 @@
         <BackButtonBehavior IsVisible="False"/>
     </Shell.BackButtonBehavior>
 
+
     <Grid ColumnDefinitions="auto,*,auto"
           RowDefinitions="auto,*,auto">
 
@@ -116,7 +117,7 @@
                                             <Label FontFamily="Arial"  Margin="5" FontSize="30" Text="Admin note:" TextColor="#E94560" VerticalOptions="Start" IsVisible="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:UsersViewModel}}, Path=IsCurrentUserAdmin}"/>
                                             <Label FontFamily="Arial"  Margin="5" FontSize="30" Text="{Binding Note}" VerticalOptions="Center" MaximumWidthRequest="400" IsVisible="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:UsersViewModel}}, Path=IsCurrentUserAdmin}"/>
                                         </VerticalStackLayout>
-                                        
+
 
                                     </VerticalStackLayout>
 
@@ -154,7 +155,7 @@
                                         <Image Source="puzzle.png" HeightRequest="50" IsVisible="{Binding Puzzle}"/>
                                     </HorizontalStackLayout>
                                 </ScrollView>
-                                
+
                             </VerticalStackLayout>
                         </Frame>
                     </Grid>

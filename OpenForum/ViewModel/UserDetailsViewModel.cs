@@ -300,6 +300,29 @@ namespace OpenForum.ViewModel
             Aktivita = User.currentViewedUser.Aktivita;
             Rychlost = User.currentViewedUser.Rychlost;
             Pomocnik = User.currentViewedUser.Pomocnik;
+            Nacas = User.currentViewedUser.Nacas;
+            DobryNapad = User.currentViewedUser.DobryNapad;
+            ChristmassCoder = User.currentViewedUser.ChristmassCoder;
+            Presenter = User.currentViewedUser.Presenter;
+            QuizzMaster = User.currentViewedUser.QuizzMaster;
+            GitHub = User.currentViewedUser.GitHub;
+            Cvicenia10 = User.currentViewedUser.Cvicenia10;
+            Cvicenia20 = User.currentViewedUser.Cvicenia20;
+            Cvicenia30 = User.currentViewedUser.Cvicenia30;
+            Cvicenia40 = User.currentViewedUser.Cvicenia40;
+            Cvicenia50 = User.currentViewedUser.Cvicenia50;
+            GildedRose = User.currentViewedUser.GildedRose;
+            OopBasics = User.currentViewedUser.OOPBasics;
+            HousingEstate = User.currentViewedUser.HousingEstate;
+            CodingGame = User.currentViewedUser.CodingGame;
+            CgHorseRacing = User.currentViewedUser.CGHorseRacing;
+            CgTemperatures = User.currentViewedUser.CGTemperatures;
+            CgCircuitResistance = User.currentViewedUser.CGCircuitResistance;
+            HelloXamarin = User.currentViewedUser.HelloXamarin;
+            BeatsPerMinute = User.currentViewedUser.BeatsPerMinute;
+            Mvvm = User.currentViewedUser.Mvvm;
+            Stopwatch = User.currentViewedUser.Stopwatch;
+            Puzzle = User.currentViewedUser.Puzzle;
         }
 
 

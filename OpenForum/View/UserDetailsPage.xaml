@@ -11,6 +11,7 @@
         <BackButtonBehavior Command="{Binding NavigateToUsersPageCommand}"/>
     </Shell.BackButtonBehavior>
 
+    <ScrollView>
     <Grid Grid.Row="1" Grid.Column="1"
               Grid.RowSpan="3"
               ColumnDefinitions="*,auto,*"
@@ -18,7 +19,7 @@
               Margin="10">
 
         <!-- currently viewing -->
-        <HorizontalStackLayout Grid.Row="0" Grid.Column="1" Spacing="10">
+        <HorizontalStackLayout Grid.Row="0" Grid.Column="1" Spacing="10" HorizontalOptions="Center">
             <Label Text="User:" TextColor="#E94560" FontSize="20" VerticalOptions="Start"/>
             <Label Text="{Binding Name}" TextColor="#E94560" FontSize="20" VerticalOptions="Start"/>
         </HorizontalStackLayout>
@@ -110,8 +111,83 @@
                         Text="{Binding Status}" IsReadOnly="True"/>
             </Frame>
         </VerticalStackLayout>
+        
+        <!-- Achievements -->
+            <VerticalStackLayout Grid.Column="1" Grid.Row="2" MaximumWidthRequest="500" Background="#16213E">
+                <Label Text="Gained achievements:" TextColor="#E94560" Margin="0,0,0,10"/>
+                <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Default" >
+                    <HorizontalStackLayout Margin="10,0,10,20" Spacing="5">
+                        <Image Source="slack.png" HeightRequest="50" IsVisible="{Binding Slack}"/>
+                        <Image Source="discord.png" HeightRequest="50" IsVisible="{Binding Discord}"/>
+                        <Image Source="aktivita.png" HeightRequest="50" IsVisible="{Binding Aktivita}"/>
+                        <Image Source="rychlost.png" HeightRequest="50" IsVisible="{Binding Rychlost}"/>
+                        <Image Source="pomocnik.png" HeightRequest="50" IsVisible="{Binding Pomocnik}"/>
+                        <Image Source="nacas.png" HeightRequest="50" IsVisible="{Binding Nacas}"/>
+                        <Image Source="dobry_napad.png" HeightRequest="50" IsVisible="{Binding DobryNapad}"/>
+                        <Image Source="christmass_coder.png" HeightRequest="50" IsVisible="{Binding ChristmassCoder}"/>
+                        <Image Source="presenter.png" HeightRequest="50" IsVisible="{Binding Presenter}"/>
+                        <Image Source="quizz_master.png" HeightRequest="50" IsVisible="{Binding QuizzMaster}"/>
+                        <Image Source="github.png" HeightRequest="50" IsVisible="{Binding GitHub}"/>
+                        <Image Source="cvicenia_10.png" HeightRequest="50" IsVisible="{Binding Cvicenia10}"/>
+                        <Image Source="cvicenia_20.png" HeightRequest="50" IsVisible="{Binding Cvicenia20}"/>
+                        <Image Source="cvicenia_30.png" HeightRequest="50" IsVisible="{Binding Cvicenia30}"/>
+                        <Image Source="cvicenia_40.png" HeightRequest="50" IsVisible="{Binding Cvicenia40}"/>
+                        <Image Source="cvicenia_50.png" HeightRequest="50" IsVisible="{Binding Cvicenia50}"/>
+                        <Image Source="gilded_rose.png" HeightRequest="50" IsVisible="{Binding GildedRose}"/>
+                        <Image Source="oop_basics.png" HeightRequest="50" BackgroundColor="#CCC" IsVisible="{Binding OopBasics}"/>
+                        <Image Source="housing_estate.png" HeightRequest="50" IsVisible="{Binding HousingEstate}"/>
+                        <Image Source="coding_game.png" HeightRequest="50" IsVisible="{Binding CodingGame}"/>
+                        <Image Source="cg_horse_racing.png" HeightRequest="50" IsVisible="{Binding CgHorseRacing}"/>
+                        <Image Source="cg_temperatures.png" HeightRequest="50" IsVisible="{Binding CgTemperatures}"/>
+                        <Image Source="cg_circuit_resistance.png" HeightRequest="50" IsVisible="{Binding CgCircuitResistance}"/>
+                        <Image Source="hello_xamarin.png" HeightRequest="50" IsVisible="{Binding HelloXamarin}"/>
+                        <Image Source="beats_per_minute.png" HeightRequest="50" BackgroundColor="#CCC" IsVisible="{Binding BeatsPerMinute}"/>
+                        <Image Source="mvvm.png" HeightRequest="50" IsVisible="{Binding Mvvm}"/>
+                        <Image Source="stopwatch.png" HeightRequest="50" IsVisible="{Binding Stopwatch}"/>
+                        <Image Source="puzzle.png" HeightRequest="50" IsVisible="{Binding Puzzle}"/>
+                    </HorizontalStackLayout>
+                </ScrollView>
 
+
+                <Label Text="Available achievements:" TextColor="#E94560" Margin="0,20,0,10"/>
+                <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Default">
+                    <HorizontalStackLayout Margin="10,0,10,20" Spacing="5">
+                        <Image Source="slack.png" HeightRequest="50" IsVisible="{Binding nSlack}"/>
+                        <Image Source="discord.png" HeightRequest="50" IsVisible="{Binding nDiscord}"/>
+                        <Image Source="aktivita.png" HeightRequest="50" IsVisible="{Binding nAktivita}"/>
+                        <Image Source="rychlost.png" HeightRequest="50" IsVisible="{Binding nRychlost}"/>
+                        <Image Source="pomocnik.png" HeightRequest="50" IsVisible="{Binding nPomocnik}"/>
+                        <Image Source="nacas.png" HeightRequest="50" IsVisible="{Binding nNacas}"/>
+                        <Image Source="dobry_napad.png" HeightRequest="50" IsVisible="{Binding nDobryNapad}"/>
+                        <Image Source="christmass_coder.png" HeightRequest="50" IsVisible="{Binding nChristmassCoder}"/>
+                        <Image Source="presenter.png" HeightRequest="50" IsVisible="{Binding nPresenter}"/>
+                        <Image Source="quizz_master.png" HeightRequest="50" IsVisible="{Binding nQuizzMaster}"/>
+                        <Image Source="github.png" HeightRequest="50" IsVisible="{Binding nGitHub}"/>
+                        <Image Source="cvicenia_10.png" HeightRequest="50" IsVisible="{Binding nCvicenia10}"/>
+                        <Image Source="cvicenia_20.png" HeightRequest="50" IsVisible="{Binding nCvicenia20}"/>
+                        <Image Source="cvicenia_30.png" HeightRequest="50" IsVisible="{Binding nCvicenia30}"/>
+                        <Image Source="cvicenia_40.png" HeightRequest="50" IsVisible="{Binding nCvicenia40}"/>
+                        <Image Source="cvicenia_50.png" HeightRequest="50" IsVisible="{Binding nCvicenia50}"/>
+                        <Image Source="gilded_rose.png" HeightRequest="50" IsVisible="{Binding nGildedRose}"/>
+                        <Image Source="oop_basics.png" HeightRequest="50" BackgroundColor="#CCC" IsVisible="{Binding nOOPBasics}"/>
+                        <Image Source="housing_estate.png" HeightRequest="50" IsVisible="{Binding nHousingEstate}"/>
+                        <Image Source="coding_game.png" HeightRequest="50" IsVisible="{Binding nCodingGame}"/>
+                        <Image Source="cg_horse_racing.png" HeightRequest="50" IsVisible="{Binding nCGHorseRacing}"/>
+                        <Image Source="cg_temperatures.png" HeightRequest="50" IsVisible="{Binding nCGTemperatures}"/>
+                        <Image Source="cg_circuit_resistance.png" HeightRequest="50" IsVisible="{Binding nCGCircuitResistance}"/>
+                        <Image Source="hello_xamarin.png" HeightRequest="50" IsVisible="{Binding nHelloXamarin}"/>
+                        <Image Source="beats_per_minute.png" HeightRequest="50" BackgroundColor="#CCC" IsVisible="{Binding nBeatsPerMinute}"/>
+                        <Image Source="mvvm.png" HeightRequest="50" IsVisible="{Binding nMvvm}"/>
+                        <Image Source="stopwatch.png" HeightRequest="50" IsVisible="{Binding nStopwatch}"/>
+                        <Image Source="puzzle.png" HeightRequest="50" IsVisible="{Binding nPuzzle}"/>
+                    </HorizontalStackLayout>
+                </ScrollView>
+
+
+            </VerticalStackLayout>
+        
 
     </Grid>
+    </ScrollView>
 
 </ContentPage>
