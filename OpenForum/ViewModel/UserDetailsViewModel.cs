@@ -1,4 +1,5 @@
 ﻿using CommunityToolkit.Mvvm.Input;
+using Microsoft.Maui.Layouts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -124,6 +125,8 @@ namespace OpenForum.ViewModel
 
         [RelayCommand]
         async Task AddAchievements(string achievement)
+
+
         {
             int index = 0;
 
@@ -550,6 +553,46 @@ namespace OpenForum.ViewModel
             
         }
 
+
+        [RelayCommand]
+        async Task RemoveAchievements(string achievement)
+        {
+            int index = 0;
+            string newAchievements ="";
+
+            if (achievement == "1,")
+            {
+                Slack = false;
+                for (int i = 0; i < User.All.Count; i++)
+                {
+                    if (User.All[i].Id == Id)
+                    {
+                        index = i;
+                        User.All[i].Slack = false;
+
+                        newAchievements = User.All[i].Achievements.Remove(User.All[i].Achievements.IndexOf("," + achievement), achievement.Length);
+                        break;
+                    }
+                }
+                await UserService.UpdateAchievements(Id, newAchievements);
+            }
+            else if (achievement == "2,")
+            {
+                Discord = false;
+                for (int i = 0; i < User.All.Count; i++)
+                {
+                    if (User.All[i].Id == Id)
+                    {
+                        index = i;
+                        User.All[i].Discord = false;
+
+                        newAchievements = User.All[i].Achievements.Remove(User.All[i].Achievements.IndexOf("," + achievement), achievement.Length);
+                        break;
+                    }
+                }
+                await UserService.UpdateAchievements(Id, newAchievements);
+            }
+        }
 
         // Achievements
         [NotifyPropertyChangedFor(nameof(nSlack))]

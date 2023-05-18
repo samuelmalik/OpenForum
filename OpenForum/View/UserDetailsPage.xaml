@@ -119,10 +119,16 @@
                     <HorizontalStackLayout Margin="10,0,10,20" Spacing="5">
                         <Image Source="slack.png" HeightRequest="50" IsVisible="{Binding Slack}">
                             <Image.GestureRecognizers>
-                                <TapGestureRecognizer/>
+                                <TapGestureRecognizer Command="{Binding RemoveAchievementsCommand}"
+                                                      CommandParameter="1,"/>
                             </Image.GestureRecognizers>
                         </Image>
-                        <Image Source="discord.png" HeightRequest="50" IsVisible="{Binding Discord}"/>
+                        <Image Source="discord.png" HeightRequest="50" IsVisible="{Binding Discord}">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding RemoveAchievementsCommand}"
+                                                      CommandParameter="2,"/>
+                            </Image.GestureRecognizers>
+                        </Image>
                         <Image Source="aktivita.png" HeightRequest="50" IsVisible="{Binding Aktivita}"/>
                         <Image Source="rychlost.png" HeightRequest="50" IsVisible="{Binding Rychlost}"/>
                         <Image Source="pomocnik.png" HeightRequest="50" IsVisible="{Binding Pomocnik}"/>
