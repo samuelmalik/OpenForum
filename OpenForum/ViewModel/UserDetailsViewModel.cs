@@ -592,6 +592,422 @@ namespace OpenForum.ViewModel
                 }
                 await UserService.UpdateAchievements(Id, newAchievements);
             }
+            else if (achievement == "3,")
+            {
+                Aktivita = false;
+                for (int i = 0; i < User.All.Count; i++)
+                {
+                    if (User.All[i].Id == Id)
+                    {
+                        index = i;
+                        User.All[i].Aktivita = false;
+
+                        newAchievements = User.All[i].Achievements.Remove(User.All[i].Achievements.IndexOf("," + achievement), achievement.Length);
+                        break;
+                    }
+                }
+                await UserService.UpdateAchievements(Id, newAchievements);
+            }
+            else if (achievement == "4,")
+            {
+                Rychlost = false;
+                for (int i = 0; i < User.All.Count; i++)
+                {
+                    if (User.All[i].Id == Id)
+                    {
+                        index = i;
+                        User.All[i].Rychlost = false;
+
+                        newAchievements = User.All[i].Achievements.Remove(User.All[i].Achievements.IndexOf("," + achievement), achievement.Length);
+                        break;
+                    }
+                }
+                await UserService.UpdateAchievements(Id, newAchievements);
+            }
+            else if (achievement == "5,")
+            {
+                Pomocnik = false;
+                for (int i = 0; i < User.All.Count; i++)
+                {
+                    if (User.All[i].Id == Id)
+                    {
+                        index = i;
+                        User.All[i].Pomocnik = false;
+
+                        newAchievements = User.All[i].Achievements.Remove(User.All[i].Achievements.IndexOf("," + achievement), achievement.Length);
+                        break;
+                    }
+                }
+                await UserService.UpdateAchievements(Id, newAchievements);
+            }
+            else if (achievement == "6,")
+            {
+                Nacas = false;
+                for (int i = 0; i < User.All.Count; i++)
+                {
+                    if (User.All[i].Id == Id)
+                    {
+                        index = i;
+                        User.All[i].Nacas = false;
+
+                        newAchievements = User.All[i].Achievements.Remove(User.All[i].Achievements.IndexOf("," + achievement), achievement.Length);
+                        break;
+                    }
+                }
+                await UserService.UpdateAchievements(Id, newAchievements);
+            }
+            else if (achievement == "7,")
+            {
+                DobryNapad = false;
+                for (int i = 0; i < User.All.Count; i++)
+                {
+                    if (User.All[i].Id == Id)
+                    {
+                        index = i;
+                        User.All[i].DobryNapad = false;
+
+                        newAchievements = User.All[i].Achievements.Remove(User.All[i].Achievements.IndexOf("," + achievement), achievement.Length);
+                        break;
+                    }
+                }
+                await UserService.UpdateAchievements(Id, newAchievements);
+            }
+            else if (achievement == "8,")
+            {
+                ChristmassCoder = false;
+                for (int i = 0; i < User.All.Count; i++)
+                {
+                    if (User.All[i].Id == Id)
+                    {
+                        index = i;
+                        User.All[i].ChristmassCoder = false;
+
+                        newAchievements = User.All[i].Achievements.Remove(User.All[i].Achievements.IndexOf("," + achievement), achievement.Length);
+                        break;
+                    }
+                }
+                await UserService.UpdateAchievements(Id, newAchievements);
+            }
+            else if (achievement == "9,")
+            {
+                Presenter = false;
+                for (int i = 0; i < User.All.Count; i++)
+                {
+                    if (User.All[i].Id == Id)
+                    {
+                        index = i;
+                        User.All[i].Presenter = false;
+
+                        newAchievements = User.All[i].Achievements.Remove(User.All[i].Achievements.IndexOf("," + achievement), achievement.Length);
+                        break;
+                    }
+                }
+                await UserService.UpdateAchievements(Id, newAchievements);
+            }
+            else if (achievement == "10,")
+            {
+                QuizzMaster = false;
+                for (int i = 0; i < User.All.Count; i++)
+                {
+                    if (User.All[i].Id == Id)
+                    {
+                        index = i;
+                        User.All[i].QuizzMaster = false;
+
+                        newAchievements = User.All[i].Achievements.Remove(User.All[i].Achievements.IndexOf("," + achievement), achievement.Length);
+                        break;
+                    }
+                }
+                await UserService.UpdateAchievements(Id, newAchievements);
+            }
+            else if (achievement == "11,")
+            {
+                GitHub = false;
+                for (int i = 0; i < User.All.Count; i++)
+                {
+                    if (User.All[i].Id == Id)
+                    {
+                        index = i;
+                        User.All[i].GitHub = false;
+
+                        newAchievements = User.All[i].Achievements.Remove(User.All[i].Achievements.IndexOf("," + achievement), achievement.Length);
+                        break;
+                    }
+                }
+                await UserService.UpdateAchievements(Id, newAchievements);
+            }
+            else if (achievement == "12,")
+            {
+                Cvicenia10 = false;
+                for (int i = 0; i < User.All.Count; i++)
+                {
+                    if (User.All[i].Id == Id)
+                    {
+                        index = i;
+                        User.All[i].Cvicenia10 = false;
+
+                        newAchievements = User.All[i].Achievements.Remove(User.All[i].Achievements.IndexOf("," + achievement), achievement.Length);
+                        break;
+                    }
+                }
+                await UserService.UpdateAchievements(Id, newAchievements);
+            }
+            else if (achievement == "13,")
+            {
+                Cvicenia20 = false;
+                for (int i = 0; i < User.All.Count; i++)
+                {
+                    if (User.All[i].Id == Id)
+                    {
+                        index = i;
+                        User.All[i].Cvicenia20 = false;
+
+                        newAchievements = User.All[i].Achievements.Remove(User.All[i].Achievements.IndexOf("," + achievement), achievement.Length);
+                        break;
+                    }
+                }
+                await UserService.UpdateAchievements(Id, newAchievements);
+            }
+            else if (achievement == "14,")
+            {
+                Cvicenia30 = false;
+                for (int i = 0; i < User.All.Count; i++)
+                {
+                    if (User.All[i].Id == Id)
+                    {
+                        index = i;
+                        User.All[i].Cvicenia30   = false;
+
+                        newAchievements = User.All[i].Achievements.Remove(User.All[i].Achievements.IndexOf("," + achievement), achievement.Length);
+                        break;
+                    }
+                }
+                await UserService.UpdateAchievements(Id, newAchievements);
+            }
+            else if (achievement == "15,")
+            {
+                Cvicenia40 = false;
+                for (int i = 0; i < User.All.Count; i++)
+                {
+                    if (User.All[i].Id == Id)
+                    {
+                        index = i;
+                        User.All[i].Cvicenia40 = false;
+
+                        newAchievements = User.All[i].Achievements.Remove(User.All[i].Achievements.IndexOf("," + achievement), achievement.Length);
+                        break;
+                    }
+                }
+                await UserService.UpdateAchievements(Id, newAchievements);
+            }
+            else if (achievement == "16,")
+            {
+                Cvicenia50 = false;
+                for (int i = 0; i < User.All.Count; i++)
+                {
+                    if (User.All[i].Id == Id)
+                    {
+                        index = i;
+                        User.All[i].Cvicenia50 = false;
+
+                        newAchievements = User.All[i].Achievements.Remove(User.All[i].Achievements.IndexOf("," + achievement), achievement.Length);
+                        break;
+                    }
+                }
+                await UserService.UpdateAchievements(Id, newAchievements);
+            }
+            else if (achievement == "17,")
+            {
+                GildedRose = false;
+                for (int i = 0; i < User.All.Count; i++)
+                {
+                    if (User.All[i].Id == Id)
+                    {
+                        index = i;
+                        User.All[i].GildedRose = false;
+
+                        newAchievements = User.All[i].Achievements.Remove(User.All[i].Achievements.IndexOf("," + achievement), achievement.Length);
+                        break;
+                    }
+                }
+                await UserService.UpdateAchievements(Id, newAchievements);
+            }
+            else if (achievement == "18,")
+            {
+                OopBasics = false;
+                for (int i = 0; i < User.All.Count; i++)
+                {
+                    if (User.All[i].Id == Id)
+                    {
+                        index = i;
+                        User.All[i].OOPBasics = false;
+
+                        newAchievements = User.All[i].Achievements.Remove(User.All[i].Achievements.IndexOf("," + achievement), achievement.Length);
+                        break;
+                    }
+                }
+                await UserService.UpdateAchievements(Id, newAchievements);
+            }
+            else if (achievement == "19,")
+            {
+                HousingEstate = false;
+                for (int i = 0; i < User.All.Count; i++)
+                {
+                    if (User.All[i].Id == Id)
+                    {
+                        index = i;
+                        User.All[i].HousingEstate = false;
+
+                        newAchievements = User.All[i].Achievements.Remove(User.All[i].Achievements.IndexOf("," + achievement), achievement.Length);
+                        break;
+                    }
+                }
+                await UserService.UpdateAchievements(Id, newAchievements);
+            }
+            else if (achievement == "20,")
+            {
+                CodingGame = false;
+                for (int i = 0; i < User.All.Count; i++)
+                {
+                    if (User.All[i].Id == Id)
+                    {
+                        index = i;
+                        User.All[i].CodingGame = false;
+
+                        newAchievements = User.All[i].Achievements.Remove(User.All[i].Achievements.IndexOf("," + achievement), achievement.Length);
+                        break;
+                    }
+                }
+                await UserService.UpdateAchievements(Id, newAchievements);
+            }
+            else if (achievement == "21,")
+            {
+                CgHorseRacing = false;
+                for (int i = 0; i < User.All.Count; i++)
+                {
+                    if (User.All[i].Id == Id)
+                    {
+                        index = i;
+                        User.All[i].CGHorseRacing = false;
+
+                        newAchievements = User.All[i].Achievements.Remove(User.All[i].Achievements.IndexOf("," + achievement), achievement.Length);
+                        break;
+                    }
+                }
+                await UserService.UpdateAchievements(Id, newAchievements);
+            }
+            else if (achievement == "22,")
+            {
+                CgTemperatures = false;
+                for (int i = 0; i < User.All.Count; i++)
+                {
+                    if (User.All[i].Id == Id)
+                    {
+                        index = i;
+                        User.All[i].CGTemperatures = false;
+
+                        newAchievements = User.All[i].Achievements.Remove(User.All[i].Achievements.IndexOf("," + achievement), achievement.Length);
+                        break;
+                    }
+                }
+                await UserService.UpdateAchievements(Id, newAchievements);
+            }
+            else if (achievement == "23,")
+            {
+                CgCircuitResistance = false;
+                for (int i = 0; i < User.All.Count; i++)
+                {
+                    if (User.All[i].Id == Id)
+                    {
+                        index = i;
+                        User.All[i].CGCircuitResistance = false;
+
+                        newAchievements = User.All[i].Achievements.Remove(User.All[i].Achievements.IndexOf("," + achievement), achievement.Length);
+                        break;
+                    }
+                }
+                await UserService.UpdateAchievements(Id, newAchievements);
+            }
+            else if (achievement == "24,")
+            {
+                HelloXamarin = false;
+                for (int i = 0; i < User.All.Count; i++)
+                {
+                    if (User.All[i].Id == Id)
+                    {
+                        index = i;
+                        User.All[i].HelloXamarin = false;
+
+                        newAchievements = User.All[i].Achievements.Remove(User.All[i].Achievements.IndexOf("," + achievement), achievement.Length);
+                        break;
+                    }
+                }
+                await UserService.UpdateAchievements(Id, newAchievements);
+            }
+            else if (achievement == "25,")
+            {
+                BeatsPerMinute = false;
+                for (int i = 0; i < User.All.Count; i++)
+                {
+                    if (User.All[i].Id == Id)
+                    {
+                        index = i;
+                        User.All[i].BeatsPerMinute = false;
+
+                        newAchievements = User.All[i].Achievements.Remove(User.All[i].Achievements.IndexOf("," + achievement), achievement.Length);
+                        break;
+                    }
+                }
+                await UserService.UpdateAchievements(Id, newAchievements);
+            }
+            else if (achievement == "26,")
+            {
+                Mvvm = false;
+                for (int i = 0; i < User.All.Count; i++)
+                {
+                    if (User.All[i].Id == Id)
+                    {
+                        index = i;
+                        User.All[i].Mvvm = false;
+
+                        newAchievements = User.All[i].Achievements.Remove(User.All[i].Achievements.IndexOf("," + achievement), achievement.Length);
+                        break;
+                    }
+                }
+                await UserService.UpdateAchievements(Id, newAchievements);
+            }
+            else if (achievement == "27,")
+            {
+                Stopwatch = false;
+                for (int i = 0; i < User.All.Count; i++)
+                {
+                    if (User.All[i].Id == Id)
+                    {
+                        index = i;
+                        User.All[i].Stopwatch = false;
+
+                        newAchievements = User.All[i].Achievements.Remove(User.All[i].Achievements.IndexOf("," + achievement), achievement.Length);
+                        break;
+                    }
+                }
+                await UserService.UpdateAchievements(Id, newAchievements);
+            }
+            else if (achievement == "28,")
+            {
+                Puzzle = false;
+                for (int i = 0; i < User.All.Count; i++)
+                {
+                    if (User.All[i].Id == Id)
+                    {
+                        index = i;
+                        User.All[i].Puzzle = false;
+
+                        newAchievements = User.All[i].Achievements.Remove(User.All[i].Achievements.IndexOf("," + achievement), achievement.Length);
+                        break;
+                    }
+                }
+                await UserService.UpdateAchievements(Id, newAchievements);
+            }
         }
 
         // Achievements

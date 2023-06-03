@@ -129,32 +129,162 @@
                                                       CommandParameter="2,"/>
                             </Image.GestureRecognizers>
                         </Image>
-                        <Image Source="aktivita.png" HeightRequest="50" IsVisible="{Binding Aktivita}"/>
-                        <Image Source="rychlost.png" HeightRequest="50" IsVisible="{Binding Rychlost}"/>
-                        <Image Source="pomocnik.png" HeightRequest="50" IsVisible="{Binding Pomocnik}"/>
-                        <Image Source="nacas.png" HeightRequest="50" IsVisible="{Binding Nacas}"/>
-                        <Image Source="dobry_napad.png" HeightRequest="50" IsVisible="{Binding DobryNapad}"/>
-                        <Image Source="christmass_coder.png" HeightRequest="50" IsVisible="{Binding ChristmassCoder}"/>
-                        <Image Source="presenter.png" HeightRequest="50" IsVisible="{Binding Presenter}"/>
-                        <Image Source="quizz_master.png" HeightRequest="50" IsVisible="{Binding QuizzMaster}"/>
-                        <Image Source="github.png" HeightRequest="50" IsVisible="{Binding GitHub}"/>
-                        <Image Source="cvicenia_10.png" HeightRequest="50" IsVisible="{Binding Cvicenia10}"/>
-                        <Image Source="cvicenia_20.png" HeightRequest="50" IsVisible="{Binding Cvicenia20}"/>
-                        <Image Source="cvicenia_30.png" HeightRequest="50" IsVisible="{Binding Cvicenia30}"/>
-                        <Image Source="cvicenia_40.png" HeightRequest="50" IsVisible="{Binding Cvicenia40}"/>
-                        <Image Source="cvicenia_50.png" HeightRequest="50" IsVisible="{Binding Cvicenia50}"/>
-                        <Image Source="gilded_rose.png" HeightRequest="50" IsVisible="{Binding GildedRose}"/>
-                        <Image Source="oop_basics.png" HeightRequest="50" BackgroundColor="#CCC" IsVisible="{Binding OopBasics}"/>
-                        <Image Source="housing_estate.png" HeightRequest="50" IsVisible="{Binding HousingEstate}"/>
-                        <Image Source="coding_game.png" HeightRequest="50" IsVisible="{Binding CodingGame}"/>
-                        <Image Source="cg_horse_racing.png" HeightRequest="50" IsVisible="{Binding CgHorseRacing}"/>
-                        <Image Source="cg_temperatures.png" HeightRequest="50" IsVisible="{Binding CgTemperatures}"/>
-                        <Image Source="cg_circuit_resistance.png" HeightRequest="50" IsVisible="{Binding CgCircuitResistance}"/>
-                        <Image Source="hello_xamarin.png" HeightRequest="50" IsVisible="{Binding HelloXamarin}"/>
-                        <Image Source="beats_per_minute.png" HeightRequest="50" BackgroundColor="#CCC" IsVisible="{Binding BeatsPerMinute}"/>
-                        <Image Source="mvvm.png" HeightRequest="50" IsVisible="{Binding Mvvm}"/>
-                        <Image Source="stopwatch.png" HeightRequest="50" IsVisible="{Binding Stopwatch}"/>
-                        <Image Source="puzzle.png" HeightRequest="50" IsVisible="{Binding Puzzle}"/>
+                        <Image Source="aktivita.png" HeightRequest="50" IsVisible="{Binding Aktivita}">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding RemoveAchievementsCommand}"
+                                                      CommandParameter="3,"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image Source="rychlost.png" HeightRequest="50" IsVisible="{Binding Rychlost}">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding RemoveAchievementsCommand}"
+                                                      CommandParameter="4,"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image Source="pomocnik.png" HeightRequest="50" IsVisible="{Binding Pomocnik}">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding RemoveAchievementsCommand}"
+                                                      CommandParameter="5,"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image Source="nacas.png" HeightRequest="50" IsVisible="{Binding Nacas}">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding RemoveAchievementsCommand}"
+                                                      CommandParameter="6,"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image Source="dobry_napad.png" HeightRequest="50" IsVisible="{Binding DobryNapad}">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding RemoveAchievementsCommand}"
+                                                      CommandParameter="7,"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image Source="christmass_coder.png" HeightRequest="50" IsVisible="{Binding ChristmassCoder}">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding RemoveAchievementsCommand}"
+                                                      CommandParameter="8,"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image Source="presenter.png" HeightRequest="50" IsVisible="{Binding Presenter}">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding RemoveAchievementsCommand}"
+                                                      CommandParameter="9,"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image Source="quizz_master.png" HeightRequest="50" IsVisible="{Binding QuizzMaster}">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding RemoveAchievementsCommand}"
+                                                      CommandParameter="10,"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image Source="github.png" HeightRequest="50" IsVisible="{Binding GitHub}">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding RemoveAchievementsCommand}"
+                                                      CommandParameter="11,"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image Source="cvicenia_10.png" HeightRequest="50" IsVisible="{Binding Cvicenia10}">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding RemoveAchievementsCommand}"
+                                                      CommandParameter="12,"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image Source="cvicenia_20.png" HeightRequest="50" IsVisible="{Binding Cvicenia20}">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding RemoveAchievementsCommand}"
+                                                      CommandParameter="13,"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image Source="cvicenia_30.png" HeightRequest="50" IsVisible="{Binding Cvicenia30}">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding RemoveAchievementsCommand}"
+                                                      CommandParameter="14,"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image Source="cvicenia_40.png" HeightRequest="50" IsVisible="{Binding Cvicenia40}">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding RemoveAchievementsCommand}"
+                                                      CommandParameter="15,"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image Source="cvicenia_50.png" HeightRequest="50" IsVisible="{Binding Cvicenia50}">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding RemoveAchievementsCommand}"
+                                                      CommandParameter="16,"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image Source="gilded_rose.png" HeightRequest="50" IsVisible="{Binding GildedRose}">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding RemoveAchievementsCommand}"
+                                                      CommandParameter="17,"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image Source="oop_basics.png" HeightRequest="50" BackgroundColor="#CCC" IsVisible="{Binding OopBasics}">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding RemoveAchievementsCommand}"
+                                                      CommandParameter="18,"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image Source="housing_estate.png" HeightRequest="50" IsVisible="{Binding HousingEstate}">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding RemoveAchievementsCommand}"
+                                                      CommandParameter="19,"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image Source="coding_game.png" HeightRequest="50" IsVisible="{Binding CodingGame}">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding RemoveAchievementsCommand}"
+                                                      CommandParameter="20,"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image Source="cg_horse_racing.png" HeightRequest="50" IsVisible="{Binding CgHorseRacing}">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding RemoveAchievementsCommand}"
+                                                      CommandParameter="21,"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image Source="cg_temperatures.png" HeightRequest="50" IsVisible="{Binding CgTemperatures}">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding RemoveAchievementsCommand}"
+                                                      CommandParameter="22,"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image Source="cg_circuit_resistance.png" HeightRequest="50" IsVisible="{Binding CgCircuitResistance}">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding RemoveAchievementsCommand}"
+                                                      CommandParameter="23,"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image Source="hello_xamarin.png" HeightRequest="50" IsVisible="{Binding HelloXamarin}">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding RemoveAchievementsCommand}"
+                                                      CommandParameter="24,"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image Source="beats_per_minute.png" HeightRequest="50" BackgroundColor="#CCC" IsVisible="{Binding BeatsPerMinute}">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding RemoveAchievementsCommand}"
+                                                      CommandParameter="25,"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image Source="mvvm.png" HeightRequest="50" IsVisible="{Binding Mvvm}">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding RemoveAchievementsCommand}"
+                                                      CommandParameter="26,"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image Source="stopwatch.png" HeightRequest="50" IsVisible="{Binding Stopwatch}">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding RemoveAchievementsCommand}"
+                                                      CommandParameter="27,"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Image Source="puzzle.png" HeightRequest="50" IsVisible="{Binding Puzzle}">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding RemoveAchievementsCommand}"
+                                                      CommandParameter="28,"/>
+                            </Image.GestureRecognizers>
+                        </Image>
                     </HorizontalStackLayout>
                 </ScrollView>
 
