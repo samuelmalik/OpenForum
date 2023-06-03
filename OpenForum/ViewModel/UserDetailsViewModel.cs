@@ -571,6 +571,7 @@ namespace OpenForum.ViewModel
                         User.All[i].Slack = false;
 
                         newAchievements = User.All[i].Achievements.Remove(User.All[i].Achievements.IndexOf("," + achievement), achievement.Length);
+                        User.All[i].Achievements = newAchievements;
                         break;
                     }
                 }
@@ -587,6 +588,7 @@ namespace OpenForum.ViewModel
                         User.All[i].Discord = false;
 
                         newAchievements = User.All[i].Achievements.Remove(User.All[i].Achievements.IndexOf("," + achievement), achievement.Length);
+                        User.All[i].Achievements = newAchievements;
                         break;
                     }
                 }
@@ -603,6 +605,7 @@ namespace OpenForum.ViewModel
                         User.All[i].Aktivita = false;
 
                         newAchievements = User.All[i].Achievements.Remove(User.All[i].Achievements.IndexOf("," + achievement), achievement.Length);
+                        User.All[i].Achievements = newAchievements;
                         break;
                     }
                 }
@@ -619,6 +622,7 @@ namespace OpenForum.ViewModel
                         User.All[i].Rychlost = false;
 
                         newAchievements = User.All[i].Achievements.Remove(User.All[i].Achievements.IndexOf("," + achievement), achievement.Length);
+                        User.All[i].Achievements = newAchievements;
                         break;
                     }
                 }
@@ -635,6 +639,7 @@ namespace OpenForum.ViewModel
                         User.All[i].Pomocnik = false;
 
                         newAchievements = User.All[i].Achievements.Remove(User.All[i].Achievements.IndexOf("," + achievement), achievement.Length);
+                        User.All[i].Achievements = newAchievements;
                         break;
                     }
                 }
@@ -651,6 +656,7 @@ namespace OpenForum.ViewModel
                         User.All[i].Nacas = false;
 
                         newAchievements = User.All[i].Achievements.Remove(User.All[i].Achievements.IndexOf("," + achievement), achievement.Length);
+                        User.All[i].Achievements = newAchievements;
                         break;
                     }
                 }
@@ -667,6 +673,7 @@ namespace OpenForum.ViewModel
                         User.All[i].DobryNapad = false;
 
                         newAchievements = User.All[i].Achievements.Remove(User.All[i].Achievements.IndexOf("," + achievement), achievement.Length);
+                        User.All[i].Achievements = newAchievements;
                         break;
                     }
                 }
@@ -683,6 +690,7 @@ namespace OpenForum.ViewModel
                         User.All[i].ChristmassCoder = false;
 
                         newAchievements = User.All[i].Achievements.Remove(User.All[i].Achievements.IndexOf("," + achievement), achievement.Length);
+                        User.All[i].Achievements = newAchievements;
                         break;
                     }
                 }
@@ -699,6 +707,7 @@ namespace OpenForum.ViewModel
                         User.All[i].Presenter = false;
 
                         newAchievements = User.All[i].Achievements.Remove(User.All[i].Achievements.IndexOf("," + achievement), achievement.Length);
+                        User.All[i].Achievements = newAchievements;
                         break;
                     }
                 }
@@ -715,6 +724,7 @@ namespace OpenForum.ViewModel
                         User.All[i].QuizzMaster = false;
 
                         newAchievements = User.All[i].Achievements.Remove(User.All[i].Achievements.IndexOf("," + achievement), achievement.Length);
+                        User.All[i].Achievements = newAchievements;
                         break;
                     }
                 }
@@ -731,6 +741,7 @@ namespace OpenForum.ViewModel
                         User.All[i].GitHub = false;
 
                         newAchievements = User.All[i].Achievements.Remove(User.All[i].Achievements.IndexOf("," + achievement), achievement.Length);
+                        User.All[i].Achievements = newAchievements;
                         break;
                     }
                 }
@@ -747,6 +758,7 @@ namespace OpenForum.ViewModel
                         User.All[i].Cvicenia10 = false;
 
                         newAchievements = User.All[i].Achievements.Remove(User.All[i].Achievements.IndexOf("," + achievement), achievement.Length);
+                        User.All[i].Achievements = newAchievements;
                         break;
                     }
                 }
@@ -763,6 +775,7 @@ namespace OpenForum.ViewModel
                         User.All[i].Cvicenia20 = false;
 
                         newAchievements = User.All[i].Achievements.Remove(User.All[i].Achievements.IndexOf("," + achievement), achievement.Length);
+                        User.All[i].Achievements = newAchievements;
                         break;
                     }
                 }
@@ -779,6 +792,7 @@ namespace OpenForum.ViewModel
                         User.All[i].Cvicenia30   = false;
 
                         newAchievements = User.All[i].Achievements.Remove(User.All[i].Achievements.IndexOf("," + achievement), achievement.Length);
+                        User.All[i].Achievements = newAchievements;
                         break;
                     }
                 }
@@ -795,6 +809,7 @@ namespace OpenForum.ViewModel
                         User.All[i].Cvicenia40 = false;
 
                         newAchievements = User.All[i].Achievements.Remove(User.All[i].Achievements.IndexOf("," + achievement), achievement.Length);
+                        User.All[i].Achievements = newAchievements;
                         break;
                     }
                 }
@@ -811,6 +826,7 @@ namespace OpenForum.ViewModel
                         User.All[i].Cvicenia50 = false;
 
                         newAchievements = User.All[i].Achievements.Remove(User.All[i].Achievements.IndexOf("," + achievement), achievement.Length);
+                        User.All[i].Achievements = newAchievements;
                         break;
                     }
                 }
@@ -827,6 +843,7 @@ namespace OpenForum.ViewModel
                         User.All[i].GildedRose = false;
 
                         newAchievements = User.All[i].Achievements.Remove(User.All[i].Achievements.IndexOf("," + achievement), achievement.Length);
+                        User.All[i].Achievements = newAchievements;
                         break;
                     }
                 }
@@ -843,6 +860,7 @@ namespace OpenForum.ViewModel
                         User.All[i].OOPBasics = false;
 
                         newAchievements = User.All[i].Achievements.Remove(User.All[i].Achievements.IndexOf("," + achievement), achievement.Length);
+                        User.All[i].Achievements = newAchievements;
                         break;
                     }
                 }
@@ -859,6 +877,7 @@ namespace OpenForum.ViewModel
                         User.All[i].HousingEstate = false;
 
                         newAchievements = User.All[i].Achievements.Remove(User.All[i].Achievements.IndexOf("," + achievement), achievement.Length);
+                        User.All[i].Achievements = newAchievements;
                         break;
                     }
                 }
@@ -875,6 +894,7 @@ namespace OpenForum.ViewModel
                         User.All[i].CodingGame = false;
 
                         newAchievements = User.All[i].Achievements.Remove(User.All[i].Achievements.IndexOf("," + achievement), achievement.Length);
+                        User.All[i].Achievements = newAchievements;
                         break;
                     }
                 }
@@ -891,6 +911,8 @@ namespace OpenForum.ViewModel
                         User.All[i].CGHorseRacing = false;
 
                         newAchievements = User.All[i].Achievements.Remove(User.All[i].Achievements.IndexOf("," + achievement), achievement.Length);
+                        User.All[i].Achievements = newAchievements;
+                        User.All[i].Achievements = newAchievements;
                         break;
                     }
                 }
@@ -907,6 +929,7 @@ namespace OpenForum.ViewModel
                         User.All[i].CGTemperatures = false;
 
                         newAchievements = User.All[i].Achievements.Remove(User.All[i].Achievements.IndexOf("," + achievement), achievement.Length);
+                        User.All[i].Achievements = newAchievements;
                         break;
                     }
                 }
@@ -923,6 +946,7 @@ namespace OpenForum.ViewModel
                         User.All[i].CGCircuitResistance = false;
 
                         newAchievements = User.All[i].Achievements.Remove(User.All[i].Achievements.IndexOf("," + achievement), achievement.Length);
+                        User.All[i].Achievements = newAchievements;
                         break;
                     }
                 }
@@ -939,6 +963,7 @@ namespace OpenForum.ViewModel
                         User.All[i].HelloXamarin = false;
 
                         newAchievements = User.All[i].Achievements.Remove(User.All[i].Achievements.IndexOf("," + achievement), achievement.Length);
+                        User.All[i].Achievements = newAchievements;
                         break;
                     }
                 }
@@ -955,6 +980,7 @@ namespace OpenForum.ViewModel
                         User.All[i].BeatsPerMinute = false;
 
                         newAchievements = User.All[i].Achievements.Remove(User.All[i].Achievements.IndexOf("," + achievement), achievement.Length);
+                        User.All[i].Achievements = newAchievements;
                         break;
                     }
                 }
@@ -971,6 +997,7 @@ namespace OpenForum.ViewModel
                         User.All[i].Mvvm = false;
 
                         newAchievements = User.All[i].Achievements.Remove(User.All[i].Achievements.IndexOf("," + achievement), achievement.Length);
+                        User.All[i].Achievements = newAchievements;
                         break;
                     }
                 }
@@ -987,6 +1014,7 @@ namespace OpenForum.ViewModel
                         User.All[i].Stopwatch = false;
 
                         newAchievements = User.All[i].Achievements.Remove(User.All[i].Achievements.IndexOf("," + achievement), achievement.Length);
+                        User.All[i].Achievements = newAchievements;
                         break;
                     }
                 }
@@ -1003,6 +1031,7 @@ namespace OpenForum.ViewModel
                         User.All[i].Puzzle = false;
 
                         newAchievements = User.All[i].Achievements.Remove(User.All[i].Achievements.IndexOf("," + achievement), achievement.Length);
+                        User.All[i].Achievements = newAchievements;
                         break;
                     }
                 }
